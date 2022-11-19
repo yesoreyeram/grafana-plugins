@@ -1,0 +1,4 @@
+{
+  "ignorePaths": ["node_modules/**", "dist/**"],
+  "words": ["Grafana", "Sriramajeyam", "Sugumaran", "yesoreyeram"]
+}

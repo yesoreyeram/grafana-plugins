@@ -1,0 +1,15 @@
+{
+  "name": "@yesoreyeram/grafana-plugins",
+  "version": "0.0.1",
+  "description": "My experiments with Grafana plugins.",
+  "keywords": [],
+  "author": "Sriramajeyam Sugumaran",
+  "license": "MIT",
+  "scripts": {
+    "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cspell": "^6.14.3"
+  }
+}
