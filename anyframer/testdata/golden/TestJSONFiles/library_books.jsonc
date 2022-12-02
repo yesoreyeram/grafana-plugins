@@ -1,0 +1,104 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 5 Fields by 4 Rows
+//  +----------------------------------+------------------+-----------------+------------------+---------------------------------------------------+
+//  | Name: authors                    | Name: copies     | Name: isbn      | Name: price      | Name: title                                       |
+//  | Labels:                          | Labels:          | Labels:         | Labels:          | Labels:                                           |
+//  | Type: []*string                  | Type: []*float64 | Type: []*string | Type: []*float64 | Type: []*string                                   |
+//  +----------------------------------+------------------+-----------------+------------------+---------------------------------------------------+
+//  | ["Abelson","Sussman"]            | 2                | 9780262510875   | 38.9             | Structure and Interpretation of Computer Programs |
+//  | ["Kernighan","Richie"]           | 3                | 9780131103627   | 33.59            | The C Programming Language                        |
+//  | ["Aho","Kernighan","Weinberger"] | 1                | 9780201079814   | null             | The AWK Programming Language                      |
+//  | ["Aho","Lam","Sethi","Ullman"]   | 1                | 9780201100884   | 23.38            | Compilers: Principles, Techniques, and Tools      |
+//  +----------------------------------+------------------+-----------------+------------------+---------------------------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "authors",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "copies",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "isbn",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "price",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "[\"Abelson\",\"Sussman\"]",
+            "[\"Kernighan\",\"Richie\"]",
+            "[\"Aho\",\"Kernighan\",\"Weinberger\"]",
+            "[\"Aho\",\"Lam\",\"Sethi\",\"Ullman\"]"
+          ],
+          [
+            2,
+            3,
+            1,
+            1
+          ],
+          [
+            "9780262510875",
+            "9780131103627",
+            "9780201079814",
+            "9780201100884"
+          ],
+          [
+            38.9,
+            33.59,
+            null,
+            23.38
+          ],
+          [
+            "Structure and Interpretation of Computer Programs",
+            "The C Programming Language",
+            "The AWK Programming Language",
+            "Compilers: Principles, Techniques, and Tools"
+          ]
+        ]
+      }
+    }
+  ]
+}

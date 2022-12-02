@@ -1,0 +1,42 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 1 Fields by 1 Rows
+//  +----------------+
+//  | Name: response |
+//  | Labels:        |
+//  | Type: []*bool  |
+//  +----------------+
+//  | true           |
+//  +----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "response",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            true
+          ]
+        ]
+      }
+    }
+  ]
+}

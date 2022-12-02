@@ -1,0 +1,42 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 1 Fields by 1 Rows
+//  +--------------------------------------------------------------------------------------------------------------------------+
+//  | Name: root                                                                                                               |
+//  | Labels:                                                                                                                  |
+//  | Type: []*string                                                                                                          |
+//  +--------------------------------------------------------------------------------------------------------------------------+
+//  | {"row":[{"name":"foo","salary":"123","self_employed":"false"},{"name":"bar","salary":"456.789","self_employed":"true"}]} |
+//  +--------------------------------------------------------------------------------------------------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "root",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "{\"row\":[{\"name\":\"foo\",\"salary\":\"123\",\"self_employed\":\"false\"},{\"name\":\"bar\",\"salary\":\"456.789\",\"self_employed\":\"true\"}]}"
+          ]
+        ]
+      }
+    }
+  ]
+}

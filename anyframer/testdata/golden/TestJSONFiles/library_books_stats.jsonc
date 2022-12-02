@@ -1,0 +1,97 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 6 Fields by 1 Rows
+//  +-----------------------+-----------------------+-----------------------+-------------------------+------------------------+-------------------------+
+//  | Name: all books value | Name: max books value | Name: min books value | Name: total books count | Name: total books type | Name: total books value |
+//  | Labels:               | Labels:               | Labels:               | Labels:                 | Labels:                | Labels:                 |
+//  | Type: []*float64      | Type: []*float64      | Type: []*float64      | Type: []*float64        | Type: []*float64       | Type: []*float64        |
+//  +-----------------------+-----------------------+-----------------------+-------------------------+------------------------+-------------------------+
+//  | 201.95                | 38.9                  | 23.38                 | 7                       | 11                     | 95.87                   |
+//  +-----------------------+-----------------------+-----------------------+-------------------------+------------------------+-------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "all books value",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "max books value",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "min books value",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "total books count",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "total books type",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "total books value",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            201.95
+          ],
+          [
+            38.9
+          ],
+          [
+            23.38
+          ],
+          [
+            7
+          ],
+          [
+            11
+          ],
+          [
+            95.87
+          ]
+        ]
+      }
+    }
+  ]
+}

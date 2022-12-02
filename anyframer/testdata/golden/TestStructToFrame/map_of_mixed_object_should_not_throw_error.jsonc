@@ -1,0 +1,361 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: TestStructToFrame/map_of_mixed_object_should_not_throw_error
+//  Dimensions: 30 Fields by 1 Rows
+//  +------------------+--------------------------+---------------------+-----------------------------+---------------------+-----------------------------+------------------+-------------------------+-------------------+---------------------------+-------------------+---------------------------+-------------------+---------------------------+------------------+--------------------------+--------------------+----------------------------+-------------------------------+-------------------------------+------------------+--------------------------+--------------------+----------------------------+--------------------+----------------------------+--------------------+----------------------------+-------------------+---------------------------+
+//  | Name: valid bool | Name: valid bool pointer | Name: valid float32 | Name: valid float32 pointer | Name: valid float64 | Name: valid float64 pointer | Name: valid int  | Name: valid int pointer | Name: valid int16 | Name: valid int16 pointer | Name: valid int32 | Name: valid int32 pointer | Name: valid int64 | Name: valid int64 pointer | Name: valid int8 | Name: valid int8 pointer | Name: valid string | Name: valid string pointer | Name: valid time              | Name: valid time pointer      | Name: valid uint | Name: valid uint pointer | Name: valid uint16 | Name: valid uint16 pointer | Name: valid uint32 | Name: valid uint32 pointer | Name: valid uint64 | Name: valid uint64 pointer | Name: valid uint8 | Name: valid uint8 pointer |
+//  | Labels:          | Labels:                  | Labels:             | Labels:                     | Labels:             | Labels:                     | Labels:          | Labels:                 | Labels:           | Labels:                   | Labels:           | Labels:                   | Labels:           | Labels:                   | Labels:          | Labels:                  | Labels:            | Labels:                    | Labels:                       | Labels:                       | Labels:          | Labels:                  | Labels:            | Labels:                    | Labels:            | Labels:                    | Labels:            | Labels:                    | Labels:           | Labels:                   |
+//  | Type: []*bool    | Type: []*bool            | Type: []*float64    | Type: []*float64            | Type: []*float64    | Type: []*float64            | Type: []*float64 | Type: []*float64        | Type: []*float64  | Type: []*float64          | Type: []*float64  | Type: []*float64          | Type: []*float64  | Type: []*float64          | Type: []*float64 | Type: []*float64         | Type: []*string    | Type: []*string            | Type: []*time.Time            | Type: []*time.Time            | Type: []*float64 | Type: []*float64         | Type: []*float64   | Type: []*float64           | Type: []*float64   | Type: []*float64           | Type: []*float64   | Type: []*float64           | Type: []*float64  | Type: []*float64          |
+//  +------------------+--------------------------+---------------------+-----------------------------+---------------------+-----------------------------+------------------+-------------------------+-------------------+---------------------------+-------------------+---------------------------+-------------------+---------------------------+------------------+--------------------------+--------------------+----------------------------+-------------------------------+-------------------------------+------------------+--------------------------+--------------------+----------------------------+--------------------+----------------------------+--------------------+----------------------------+-------------------+---------------------------+
+//  | true             | true                     | 123.45600128173828  | 123.45600128173828          | 123.456             | 123.456                     | 123              | 123                     | 123               | 123                       | 123               | 123                       | 123               | 123                       | 123              | 123                      | foo                | foo                        | 1970-01-01 01:00:01 +0100 BST | 1970-01-01 01:00:01 +0100 BST | 123              | 123                      | 123                | 123                        | 123                | 123                        | 123                | 123                        | 123               | 123                       |
+//  +------------------+--------------------------+---------------------+-----------------------------+---------------------+-----------------------------+------------------+-------------------------+-------------------+---------------------------+-------------------+---------------------------+-------------------+---------------------------+------------------+--------------------------+--------------------+----------------------------+-------------------------------+-------------------------------+------------------+--------------------------+--------------------+----------------------------+--------------------+----------------------------+--------------------+----------------------------+-------------------+---------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestStructToFrame/map_of_mixed_object_should_not_throw_error",
+        "fields": [
+          {
+            "name": "valid bool",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid bool pointer",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid float32",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid float32 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid float64",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid float64 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int16",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int16 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int32",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int32 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int64",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int64 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int8",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid int8 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid string",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid string pointer",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid time",
+            "type": "time",
+            "typeInfo": {
+              "frame": "time.Time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid time pointer",
+            "type": "time",
+            "typeInfo": {
+              "frame": "time.Time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint16",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint16 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint32",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint32 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint64",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint64 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint8",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "valid uint8 pointer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            true
+          ],
+          [
+            true
+          ],
+          [
+            123.45600128173828
+          ],
+          [
+            123.45600128173828
+          ],
+          [
+            123.456
+          ],
+          [
+            123.456
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            "foo"
+          ],
+          [
+            "foo"
+          ],
+          [
+            1000
+          ],
+          [
+            1000
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ],
+          [
+            123
+          ]
+        ]
+      }
+    }
+  ]
+}

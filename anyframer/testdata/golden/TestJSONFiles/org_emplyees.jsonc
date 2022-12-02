@@ -1,0 +1,148 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 7 Fields by 6 Rows
+//  +------------------+-----------------+------------------+-----------------------------------------------+--------------------------+------------------+-------------------------------------------+
+//  | Name: age        | Name: country   | Name: id         | Name: name                                    | Name: occupation         | Name: salary     | Name: skills                              |
+//  | Labels:          | Labels:         | Labels:          | Labels:                                       | Labels:                  | Labels:          | Labels:                                   |
+//  | Type: []*float64 | Type: []*string | Type: []*string  | Type: []*string                               | Type: []*string          | Type: []*float64 | Type: []*string                           |
+//  +------------------+-----------------+------------------+-----------------------------------------------+--------------------------+------------------+-------------------------------------------+
+//  | 38               | USA             | leanne_graham    | {"fullname":"Leanne Graham"}                  | Devops Engineer          | 3000             | ["devops","grafana","kubernetes"]         |
+//  | 27               | USA             | ervin_howell     | {"fullname":"Ervin Howell"}                   | Software Engineer        | 2300             | ["python","java","grafana"]               |
+//  | 17               | Canada          | clementine_bauch | {"fullname":"Clementine_Bauch"}               | Student                  | null             | null                                      |
+//  | 42               | UK              | patricia_lebsack | {"fullname":"Patricia Lebsack"}               | Software Engineer        | 2800             | ["python","kubernetes"]                   |
+//  | 38               | USA             | leanne_bell      | {"fullname":"Leanne Bell"}                    | Senior Software Engineer | 4000             | ["python","kubernetes","grafana","scrum"] |
+//  | 32               | USA             | chelsey_dietrich | {"firstname":"Chelsey","lastname":"Dietrich"} | Software Engineer        | 3500             | ["golang","kubernetes"]                   |
+//  +------------------+-----------------+------------------+-----------------------------------------------+--------------------------+------------------+-------------------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "occupation",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "salary",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "skills",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            38,
+            27,
+            17,
+            42,
+            38,
+            32
+          ],
+          [
+            "USA",
+            "USA",
+            "Canada",
+            "UK",
+            "USA",
+            "USA"
+          ],
+          [
+            "leanne_graham",
+            "ervin_howell",
+            "clementine_bauch",
+            "patricia_lebsack",
+            "leanne_bell",
+            "chelsey_dietrich"
+          ],
+          [
+            "{\"fullname\":\"Leanne Graham\"}",
+            "{\"fullname\":\"Ervin Howell\"}",
+            "{\"fullname\":\"Clementine_Bauch\"}",
+            "{\"fullname\":\"Patricia Lebsack\"}",
+            "{\"fullname\":\"Leanne Bell\"}",
+            "{\"firstname\":\"Chelsey\",\"lastname\":\"Dietrich\"}"
+          ],
+          [
+            "Devops Engineer",
+            "Software Engineer",
+            "Student",
+            "Software Engineer",
+            "Senior Software Engineer",
+            "Software Engineer"
+          ],
+          [
+            3000,
+            2300,
+            null,
+            2800,
+            4000,
+            3500
+          ],
+          [
+            "[\"devops\",\"grafana\",\"kubernetes\"]",
+            "[\"python\",\"java\",\"grafana\"]",
+            "null",
+            "[\"python\",\"kubernetes\"]",
+            "[\"python\",\"kubernetes\",\"grafana\",\"scrum\"]",
+            "[\"golang\",\"kubernetes\"]"
+          ]
+        ]
+      }
+    }
+  ]
+}

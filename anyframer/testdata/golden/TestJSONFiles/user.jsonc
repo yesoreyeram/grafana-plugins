@@ -1,0 +1,119 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 8 Fields by 1 Rows
+//  +---------------------------------------------------------------------------------------------------------------------------------+------------------+------------------------+----------------------------------------+-----------------+------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+//  | Name: address                                                                                                                   | Name: age        | Name: hobbies          | Name: name                             | Name: phone     | Name: salary     | Name: user_id   | Name: websites                                                                                                                                   |
+//  | Labels:                                                                                                                         | Labels:          | Labels:                | Labels:                                | Labels:         | Labels:          | Labels:         | Labels:                                                                                                                                          |
+//  | Type: []*string                                                                                                                 | Type: []*float64 | Type: []*string        | Type: []*string                        | Type: []*string | Type: []*float64 | Type: []*string | Type: []*string                                                                                                                                  |
+//  +---------------------------------------------------------------------------------------------------------------------------------+------------------+------------------------+----------------------------------------+-----------------+------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+//  | {"city":"London","country":"United Kingdom","county":null,"door_no":35,"postcode":"ABC 123","street":"High Road, Canary wharf"} | 32               | ["swimming","cycling"] | {"first_name":"foo","last_name":"bar"} | +0-12345-67890  | 123.456          | foo_bar         | [{"kind":"blog","url":"https://foo_bars_blog.blog"},{"kind":"twitter","url":"https://twitter.com"},{"kind":"github","url":"https://github.com"}] |
+//  +---------------------------------------------------------------------------------------------------------------------------------+------------------+------------------------+----------------------------------------+-----------------+------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "address",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "hobbies",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "phone",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "salary",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "user_id",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "websites",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "{\"city\":\"London\",\"country\":\"United Kingdom\",\"county\":null,\"door_no\":35,\"postcode\":\"ABC 123\",\"street\":\"High Road, Canary wharf\"}"
+          ],
+          [
+            32
+          ],
+          [
+            "[\"swimming\",\"cycling\"]"
+          ],
+          [
+            "{\"first_name\":\"foo\",\"last_name\":\"bar\"}"
+          ],
+          [
+            "+0-12345-67890"
+          ],
+          [
+            123.456
+          ],
+          [
+            "foo_bar"
+          ],
+          [
+            "[{\"kind\":\"blog\",\"url\":\"https://foo_bars_blog.blog\"},{\"kind\":\"twitter\",\"url\":\"https://twitter.com\"},{\"kind\":\"github\",\"url\":\"https://github.com\"}]"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: TestSliceToFrame/array_of_objects_with_columns
+//  Dimensions: 3 Fields by 2 Rows
+//  +-----------------+------------------+----------------+
+//  | Name: User Name | Name: age        | Name: salaried |
+//  | Labels:         | Labels:          | Labels:        |
+//  | Type: []*string | Type: []*float64 | Type: []*bool  |
+//  +-----------------+------------------+----------------+
+//  | foo             | 123              | true           |
+//  | bar             | 456.789          | false          |
+//  +-----------------+------------------+----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestSliceToFrame/array_of_objects_with_columns",
+        "fields": [
+          {
+            "name": "User Name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "salaried",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "foo",
+            "bar"
+          ],
+          [
+            123,
+            456.789
+          ],
+          [
+            true,
+            false
+          ]
+        ]
+      }
+    }
+  ]
+}

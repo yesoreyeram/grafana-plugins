@@ -1,0 +1,49 @@
+[
+  {
+    "user_id": "foo_bar",
+    "name": {
+      "first_name": "foo",
+      "last_name": "bar"
+    },
+    "age": 32,
+    "salary": 123.456,
+    "hobbies": ["swimming", "cycling"],
+    "address": {
+      "door_no": 35,
+      "street": "High Road, Canary wharf",
+      "city": "London",
+      "county": null,
+      "country": "United Kingdom",
+      "postcode": "ABC 123"
+    },
+    "phone": "+0-12345-67890",
+    "websites": [
+      { "kind": "blog", "url": "https://foo_bars_blog.blog" },
+      { "kind": "twitter", "url": "https://twitter.com" },
+      { "kind": "github", "url": "https://github.com" }
+    ]
+  },
+  {
+    "user_id": "alpha_beta",
+    "name": {
+      "first_name": "alpha",
+      "last_name": "beta"
+    },
+    "age": 18,
+    "isPremimum": true,
+    "address": {
+      "door_no": 135,
+      "street": "Somewhere, Nowhere",
+      "city": "New York",
+      "county": null,
+      "country": "USA",
+      "postcode": "123456"
+    },
+    "phone": "+1-12345-67890",
+    "websites": [
+      { "kind": "blog", "url": "https://alphas_blog.blog" },
+      { "kind": "twitter", "url": "https://twitter.com" },
+      { "kind": "github", "url": "https://github.com" }
+    ]
+  }
+]

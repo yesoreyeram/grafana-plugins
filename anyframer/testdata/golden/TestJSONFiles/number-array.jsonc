@@ -1,0 +1,46 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 1 Fields by 3 Rows
+//  +------------------+
+//  | Name: response   |
+//  | Labels:          |
+//  | Type: []*float64 |
+//  +------------------+
+//  | 123              |
+//  | 456.789          |
+//  | -123.456         |
+//  +------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "response",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            123,
+            456.789,
+            -123.456
+          ]
+        ]
+      }
+    }
+  ]
+}

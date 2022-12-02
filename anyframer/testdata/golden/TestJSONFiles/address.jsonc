@@ -1,0 +1,108 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 7 Fields by 1 Rows
+//  +---------------------------------------------------------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+//  | Name: Address                                                       | Name: Age        | Name: Email                                                                                                                                                        | Name: FirstName | Name: Other                                                                                                      | Name: Phone                                                                                                                                                               | Name: Surname   |
+//  | Labels:                                                             | Labels:          | Labels:                                                                                                                                                            | Labels:         | Labels:                                                                                                          | Labels:                                                                                                                                                                   | Labels:         |
+//  | Type: []*string                                                     | Type: []*float64 | Type: []*string                                                                                                                                                    | Type: []*string | Type: []*string                                                                                                  | Type: []*string                                                                                                                                                           | Type: []*string |
+//  +---------------------------------------------------------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+//  | {"City":"Winchester","Postcode":"SO21 2JN","Street":"Hursley Park"} | 28               | [{"address":["fred.smith@my-work.com","fsmith@my-work.com"],"type":"office"},{"address":["freddy@my-social.com","frederic.smith@very-serious.com"],"type":"home"}] | Fred            | {"Alternative.Address":{"City":"London","Postcode":"E1 6RF","Street":"Brick Lane"},"Misc":null,"Over 18 ?":true} | [{"number":"0203 544 1234","type":"home"},{"number":"01962 001234","type":"office"},{"number":"01962 001235","type":"office"},{"number":"077 7700 1234","type":"mobile"}] | Smith           |
+//  +---------------------------------------------------------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "Address",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Email",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "FirstName",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Other",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Phone",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Surname",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "{\"City\":\"Winchester\",\"Postcode\":\"SO21 2JN\",\"Street\":\"Hursley Park\"}"
+          ],
+          [
+            28
+          ],
+          [
+            "[{\"address\":[\"fred.smith@my-work.com\",\"fsmith@my-work.com\"],\"type\":\"office\"},{\"address\":[\"freddy@my-social.com\",\"frederic.smith@very-serious.com\"],\"type\":\"home\"}]"
+          ],
+          [
+            "Fred"
+          ],
+          [
+            "{\"Alternative.Address\":{\"City\":\"London\",\"Postcode\":\"E1 6RF\",\"Street\":\"Brick Lane\"},\"Misc\":null,\"Over 18 ?\":true}"
+          ],
+          [
+            "[{\"number\":\"0203 544 1234\",\"type\":\"home\"},{\"number\":\"01962 001234\",\"type\":\"office\"},{\"number\":\"01962 001235\",\"type\":\"office\"},{\"number\":\"077 7700 1234\",\"type\":\"mobile\"}]"
+          ],
+          [
+            "Smith"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "user_id": "foo_bar",
+  "name": {
+    "first_name": "foo",
+    "last_name": "bar"
+  },
+  "age": 32,
+  "salary": 123.456,
+  "hobbies": ["swimming", "cycling"],
+  "address": {
+    "door_no": 35,
+    "street": "High Road, Canary wharf",
+    "city": "London",
+    "county": null,
+    "country": "United Kingdom",
+    "postcode": "ABC 123"
+  },
+  "phone": "+0-12345-67890",
+  "websites": [
+    { "kind": "blog", "url": "https://foo_bars_blog.blog" },
+    { "kind": "twitter", "url": "https://twitter.com" },
+    { "kind": "github", "url": "https://github.com" }
+  ]
+}

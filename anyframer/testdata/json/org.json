@@ -1,0 +1,73 @@
+{
+  "name": "Any Framer Org",
+  "business_type": "Software Development",
+  "is_public": false,
+  "employees": [
+    {
+      "id": "leanne_graham",
+      "name": {
+        "fullname": "Leanne Graham"
+      },
+      "age": 38,
+      "skills": ["devops", "grafana", "kubernetes"],
+      "country": "USA",
+      "occupation": "Devops Engineer",
+      "salary": 3000
+    },
+    {
+      "id": "ervin_howell",
+      "name": {
+        "fullname": "Ervin Howell"
+      },
+      "age": 27,
+      "skills": ["python", "java", "grafana"],
+      "country": "USA",
+      "occupation": "Software Engineer",
+      "salary": 2300
+    },
+    {
+      "id": "clementine_bauch",
+      "name": {
+        "fullname": "Clementine_Bauch"
+      },
+      "age": 17,
+      "country": "Canada",
+      "occupation": "Student",
+      "salary": null
+    },
+    {
+      "id": "patricia_lebsack",
+      "name": {
+        "fullname": "Patricia Lebsack"
+      },
+      "age": 42,
+      "country": "UK",
+      "skills": ["python", "kubernetes"],
+      "occupation": "Software Engineer",
+      "salary": 2800
+    },
+    {
+      "id": "leanne_bell",
+      "name": {
+        "fullname": "Leanne Bell"
+      },
+      "age": 38,
+      "country": "USA",
+      "skills": ["python", "kubernetes", "grafana", "scrum"],
+      "occupation": "Senior Software Engineer",
+      "salary": 4000
+    },
+    {
+      "id": "chelsey_dietrich",
+      "name": {
+        "firstname": "Chelsey",
+        "lastname": "Dietrich"
+      },
+      "age": 32,
+      "country": "USA",
+      "skills": ["golang", "kubernetes"],
+      "occupation": "Software Engineer",
+      "salary": 3500
+    }
+  ]
+}

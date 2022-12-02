@@ -1,0 +1,68 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 3 Fields by 2 Rows
+//  +-----------------+-----------------+---------------------+
+//  | Name: name      | Name: salary    | Name: self_employed |
+//  | Labels:         | Labels:         | Labels:             |
+//  | Type: []*string | Type: []*string | Type: []*string     |
+//  +-----------------+-----------------+---------------------+
+//  | foo             | 123             | false               |
+//  | bar             | 456.789         | true                |
+//  +-----------------+-----------------+---------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "salary",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "self_employed",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "foo",
+            "bar"
+          ],
+          [
+            "123",
+            "456.789"
+          ],
+          [
+            "false",
+            "true"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: TestSliceToFrame/array_of_objects_with_columns_and_nested_selector
+//  Dimensions: 4 Fields by 2 Rows
+//  +-----------------+------------------+----------------+------------------+
+//  | Name: User Name | Name: age        | Name: salaried | Name: Post Code  |
+//  | Labels:         | Labels:          | Labels:        | Labels:          |
+//  | Type: []*string | Type: []*float64 | Type: []*bool  | Type: []*float64 |
+//  +-----------------+------------------+----------------+------------------+
+//  | foo             | 123              | true           | 123              |
+//  | bar             | 456.789          | false          | 567.89           |
+//  +-----------------+------------------+----------------+------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestSliceToFrame/array_of_objects_with_columns_and_nested_selector",
+        "fields": [
+          {
+            "name": "User Name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "salaried",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Post Code",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "foo",
+            "bar"
+          ],
+          [
+            123,
+            456.789
+          ],
+          [
+            true,
+            false
+          ],
+          [
+            123,
+            567.89
+          ]
+        ]
+      }
+    }
+  ]
+}

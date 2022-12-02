@@ -1,0 +1,44 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: TestSliceToFrame/array_of_array
+//  Dimensions: 1 Fields by 2 Rows
+//  +---------------------------------------+
+//  | Name: TestSliceToFrame/array_of_array |
+//  | Labels:                               |
+//  | Type: []*string                       |
+//  +---------------------------------------+
+//  | ["hello","world"]                     |
+//  | [123.45,6]                            |
+//  +---------------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestSliceToFrame/array_of_array",
+        "fields": [
+          {
+            "name": "TestSliceToFrame/array_of_array",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "[\"hello\",\"world\"]",
+            "[123.45,6]"
+          ]
+        ]
+      }
+    }
+  ]
+}

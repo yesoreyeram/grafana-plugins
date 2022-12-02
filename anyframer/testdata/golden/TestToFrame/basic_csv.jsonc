@@ -1,0 +1,68 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 3 Fields by 2 Rows
+//  +-----------------+-----------------+-----------------+
+//  | Name: a         | Name: b         | Name: c         |
+//  | Labels:         | Labels:         | Labels:         |
+//  | Type: []*string | Type: []*string | Type: []*string |
+//  +-----------------+-----------------+-----------------+
+//  | 1               | 2               | 3               |
+//  | 4               | 5               | 6               |
+//  +-----------------+-----------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "a",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "b",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "c",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "1",
+            "4"
+          ],
+          [
+            "2",
+            "5"
+          ],
+          [
+            "3",
+            "6"
+          ]
+        ]
+      }
+    }
+  ]
+}

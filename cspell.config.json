@@ -1,4 +1,20 @@
 {
-  "ignorePaths": ["node_modules/**", "dist/**"],
-  "words": ["Grafana", "Sriramajeyam", "Sugumaran", "yesoreyeram"]
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "anyframer/testdata/**",
+    "**/*_test.go"
+  ],
+  "words": [
+    "anyframer",
+    "basgys",
+    "goxml",
+    "Grafana",
+    "jsonata",
+    "Sriramajeyam",
+    "stretchr",
+    "Sugumaran",
+    "testdata",
+    "yesoreyeram"
+  ]
 }

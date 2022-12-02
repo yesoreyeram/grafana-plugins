@@ -1,0 +1,72 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 3 Fields by 3 Rows
+//  +-------------------------------------------------------------------------+-----------------+-----------------+
+//  | Name: address                                                           | Name: id        | Name: name      |
+//  | Labels:                                                                 | Labels:         | Labels:         |
+//  | Type: []*string                                                         | Type: []*string | Type: []*string |
+//  +-------------------------------------------------------------------------+-----------------+-----------------+
+//  | {"city":"Winchester","postcode":"SO22 5PU","street":"2 Long Road"}      | 10001           | Joe Doe         |
+//  | {"city":"Winchester","postcode":"SO22 4WD","street":"56 Letsby Avenue"} | 10002           | Fred Bloggs     |
+//  | {"city":"Southampton","postcode":"SO14 0MG","street":"1 Preddy Gate"}   | 10003           | Jason Arthur    |
+//  +-------------------------------------------------------------------------+-----------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "address",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "id",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "{\"city\":\"Winchester\",\"postcode\":\"SO22 5PU\",\"street\":\"2 Long Road\"}",
+            "{\"city\":\"Winchester\",\"postcode\":\"SO22 4WD\",\"street\":\"56 Letsby Avenue\"}",
+            "{\"city\":\"Southampton\",\"postcode\":\"SO14 0MG\",\"street\":\"1 Preddy Gate\"}"
+          ],
+          [
+            "10001",
+            "10002",
+            "10003"
+          ],
+          [
+            "Joe Doe",
+            "Fred Bloggs",
+            "Jason Arthur"
+          ]
+        ]
+      }
+    }
+  ]
+}

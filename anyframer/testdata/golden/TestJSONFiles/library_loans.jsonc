@@ -1,0 +1,72 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: response
+//  Dimensions: 3 Fields by 3 Rows
+//  +-----------------+-----------------+-----------------+
+//  | Name: customer  | Name: isbn      | Name: return    |
+//  | Labels:         | Labels:         | Labels:         |
+//  | Type: []*string | Type: []*string | Type: []*string |
+//  +-----------------+-----------------+-----------------+
+//  | 10001           | 9780262510875   | 2016-12-05      |
+//  | 10003           | 9780201100884   | 2016-10-22      |
+//  | 10003           | 9780262510875   | 2016-12-22      |
+//  +-----------------+-----------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "response",
+        "fields": [
+          {
+            "name": "customer",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "isbn",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "return",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "10001",
+            "10003",
+            "10003"
+          ],
+          [
+            "9780262510875",
+            "9780201100884",
+            "9780262510875"
+          ],
+          [
+            "2016-12-05",
+            "2016-10-22",
+            "2016-12-22"
+          ]
+        ]
+      }
+    }
+  ]
+}
