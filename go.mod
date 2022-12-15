@@ -55,6 +55,9 @@ require (
 )
 
 replace (
+	// github.com/blues/jsonata-go => /Users/sriram/Documents/grafana/dev/plugins/json/goxml2json
+	// github.com/blues/jsonata-go => /Users/sriram/Documents/grafana/dev/plugins/json/jsonata-go
 	github.com/basgys/goxml2json => github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313
 	github.com/blues/jsonata-go => github.com/yesoreyeram/jsonata-go v0.0.0-20210804121258-31e6058dd1f5
+
 )
