@@ -1,0 +1,24 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "dev": {
+      "outputs": []
+    },
+    "watch": {
+      "inputs": ["src/*.ts", "src/**/*.tsx", "src/**/*.ts"],
+      "outputs": ["dist/**"]
+    },
+    "test": {
+      "outputs": []
+    },
+    "build": {
+      "outputs": ["dist/**"]
+    },
+    "ci-build": {
+      "outputs": ["dist/**"]
+    },
+    "sign": {
+      "outputs": []
+    }
+  }
+}

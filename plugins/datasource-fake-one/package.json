@@ -1,0 +1,17 @@
+{
+  "name": "yesoreyeram-fake-one-datasource",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "test": "TZ=UTC grafana-toolkit plugin:test",
+    "build": "grafana-toolkit plugin:build",
+    "ci-build": "yarn lint && grafana-toolkit plugin:ci-build",
+    "sign": "grafana-toolkit plugin:sign"
+  },
+  "dependencies": {
+    "@grafana/data": "9.1.3",
+    "@grafana/ui": "9.1.3",
+    "@grafana/runtime": "9.1.3"
+  }
+}
