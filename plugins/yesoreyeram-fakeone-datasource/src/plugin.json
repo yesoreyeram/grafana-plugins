@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-fakeone-datasource",
+  "name": "Fake one",
+  "type": "datasource",
+  "backend": true,
+  "executable": "gpx-yesoreyeram-fakeone-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "",
+    "author": {},
+    "keywords": ["yesoreyeram"],
+    "logos": {
+      "small": "",
+      "large": ""
+    }
+  },
+  "dependencies": {
+    "grafanaDependency": ">=8.4.7",
+    "grafanaVersion": "8.4.7",
+    "plugins": []
+  }
+}

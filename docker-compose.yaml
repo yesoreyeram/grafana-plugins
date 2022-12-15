@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   grafana:
-    container_name: yesoreyeram-grafama
+    container_name: yesoreyeram-grafana-plugins
     image: grafana/grafana-enterprise:9.3.1
     ports:
       - '3000:3000'

@@ -1,0 +1,5 @@
+github.com/magefile/mage v1.13.0 h1:XtLJl8bcCM7EFoO8FyH8XK3t7G5hQAeK+i4tq+veT9M=
+github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313 h1:vp9ffMzYUIikfYTcyFd1C8uxHroLHKFrZBPy02fNwOU=
+github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313/go.mod h1:2wBri9DNpmznBip4s1sqf5SdolEXkGbdaZN6hl4eino=
+github.com/yesoreyeram/jsonata-go v0.0.0-20210804121258-31e6058dd1f5 h1:Dkj5StjMr2Co6dEVkgI8tP5IGYRKJ4PlwOz8vQA4kXk=
+github.com/yesoreyeram/jsonata-go v0.0.0-20210804121258-31e6058dd1f5/go.mod h1:uns2jymDrnI7y+UFYCqsRTEiAH22GyHnNXrkupAVFWI=

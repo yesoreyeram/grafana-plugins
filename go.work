@@ -1,0 +1,7 @@
+go 1.19
+
+use (
+	./anyframer
+	./plugins/yesoreyeram-fakeone-datasource
+	./plugins/yesoreyeram-faketwo-datasource
+)
