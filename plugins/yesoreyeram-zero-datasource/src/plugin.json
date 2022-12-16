@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-zero-datasource",
+  "name": "Zero",
+  "type": "datasource",
+  "backend": true,
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-zero-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "Does almost zero thing",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
+    "keywords": ["yesoreyeram"],
+    "logos": {
+      "small": "logo.svg",
+      "large": "logo.svg"
+    }
+  },
+  "dependencies": {
+    "grafanaDependency": ">=9.1.3",
+    "grafanaVersion": "9.1.3",
+    "plugins": []
+  }
+}

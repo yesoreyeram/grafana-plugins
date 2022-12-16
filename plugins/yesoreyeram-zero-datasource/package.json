@@ -1,5 +1,5 @@
 {
-  "name": "yesoreyeram-fake-two-datasource",
+  "name": "yesoreyeram-zero-datasource",
   "version": "0.0.1",
   "scripts": {
     "dev": "grafana-toolkit plugin:dev",

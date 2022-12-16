@@ -3,3 +3,4 @@ dist
 temp
 coverage
 .turbo
+mage_output_file.go

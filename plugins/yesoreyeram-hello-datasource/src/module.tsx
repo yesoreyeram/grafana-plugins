@@ -22,7 +22,7 @@ type SecureConfig = { apiToken: string };
 type QueryType = 'greet';
 type QueryBase<QT extends QueryType> = { queryType: QT } & DataQuery;
 type GreetQuery = { greeting?: string; username: string } & QueryBase<'greet'>;
-type Query = GreetQuery;
+export type Query = GreetQuery;
 //#endregion
 //#region Types - Variable Query
 type VariableQueryType = 'greeting-list';
@@ -66,7 +66,7 @@ const applyTemplateVariables = (query: Query, scopedVars: ScopedVars): Query => 
 };
 //#endregion
 //#region DataSource
-class DataSource extends DataSourceWithBackend<Query, Config> {
+export class DataSource extends DataSourceWithBackend<Query, Config> {
   constructor(private instanceSettings: DataSourceInstanceSettings<Config>) {
     super(instanceSettings);
     this.annotations = {};
@@ -173,7 +173,7 @@ const ConfigEditor = (props: DataSourcePluginOptionsEditorProps<Config, SecureCo
     </>
   );
 };
-const QueryEditor = (props: QueryEditorProps<DataSource, Query, Config>) => {
+export const QueryEditor = (props: QueryEditorProps<DataSource, Query, Config>) => {
   const { query, onChange, onRunQuery } = props;
   const [greeting, setGreeting] = useState(query.greeting || 'Hello');
   const [username, setUsername] = useState(query.username || 'Grafana User');

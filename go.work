@@ -3,5 +3,5 @@ go 1.19
 use (
 	./anyframer
 	./plugins/yesoreyeram-hello-datasource
-	./plugins/yesoreyeram-faketwo-datasource
+	./plugins/yesoreyeram-zero-datasource
 )
