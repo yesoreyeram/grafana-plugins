@@ -1,6 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
+    "clean": {
+      "outputs": []
+    },
     "dev": {
       "outputs": []
     },
@@ -17,8 +20,24 @@
     "ci-build": {
       "outputs": ["dist/**"]
     },
-    "sign": {
+    "test:backend": {
+      "inputs": ["pkg/**/*.go"],
       "outputs": []
+    },
+    "lint:backend": {
+      "inputs": ["pkg/**/*.go"],
+      "outputs": []
+    },
+    "build:backend": {
+      "inputs": ["pkg/**/*.go"],
+      "outputs": ["dist/gpx-**"]
+    },
+    "build:all": {
+      "dependsOn": ["build", "build:backend"]
+    },
+    "sign": {
+      "cache": false,
+      "outputs": ["dist/MANIFEST.txt"]
     }
   }
 }

@@ -1,0 +1,10 @@
+apiVersion: 1
+datasources:
+  - name: Zero
+    uid: zero_ds_default
+    type: yesoreyeram-zero-datasource
+  - name: Hello
+    uid: hello_ds_default
+    type: yesoreyeram-hello-datasource
+    secureJsonData:
+      apiToken: hello

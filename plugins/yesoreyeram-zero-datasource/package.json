@@ -2,10 +2,14 @@
   "name": "yesoreyeram-zero-datasource",
   "version": "0.0.1",
   "scripts": {
+    "clean": "rm -rf dist/",
     "dev": "grafana-toolkit plugin:dev",
     "watch": "grafana-toolkit plugin:dev --watch",
     "test": "TZ=UTC grafana-toolkit plugin:test",
     "build": "grafana-toolkit plugin:build",
+    "build:backend": "mage -v",
+    "test:backend": "go test -v  ./...",
+    "lint:backend": "mage -v lint",
     "ci-build": "grafana-toolkit plugin:ci-build",
     "sign": "grafana-toolkit plugin:sign"
   },

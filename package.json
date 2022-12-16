@@ -10,11 +10,17 @@
   "author": "Sriramajeyam Sugumaran",
   "license": "MIT",
   "scripts": {
+    "clean": "turbo run clean",
     "dev": "turbo run dev",
     "watch": "turbo run watch",
     "test": "turbo run test",
     "build": "turbo run build",
+    "build:backend": "turbo run build:backend",
+    "build:all": "turbo run build:all",
+    "test:backend": "turbo run test:backend",
+    "lint:backend": "turbo run lint:backend",
     "ci-build": "turbo run ci-build",
+    "sign": "turbo run sign",
     "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\""
   },
   "dependencies": {},
