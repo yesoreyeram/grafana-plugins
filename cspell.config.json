@@ -1,7 +1,7 @@
 {
   "ignorePaths": [
-    "node_modules/**",
-    "dist/**",
+    "**/node_modules/**",
+    "**/dist/**",
     "anyframer/testdata/**",
     "**/*_test.go"
   ],
@@ -10,11 +10,14 @@
     "basgys",
     "datasource",
     "datasources",
-    "fakeone",
+    "endregion",
     "faketwo",
     "goxml",
     "grafana",
+    "httpadapter",
+    "instancemgmt",
     "jsonata",
+    "sriram",
     "sriramajeyam",
     "stretchr",
     "sugumaran",

@@ -1,19 +1,24 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
-  "id": "yesoreyeram-fakeone-datasource",
-  "name": "Fake one",
+  "id": "yesoreyeram-hello-datasource",
+  "name": "Hello",
   "type": "datasource",
   "backend": true,
-  "executable": "gpx-yesoreyeram-fakeone-datasource",
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-hello-datasource",
   "info": {
     "version": "%VERSION%",
     "updated": "%TODAY%",
-    "description": "",
-    "author": {},
+    "description": "Simple grafana plugin to greet the user",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
     "keywords": ["yesoreyeram"],
     "logos": {
-      "small": "",
-      "large": ""
+      "small": "logo.svg",
+      "large": "logo.svg"
     }
   },
   "dependencies": {

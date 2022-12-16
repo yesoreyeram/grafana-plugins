@@ -6,7 +6,7 @@
     "watch": "grafana-toolkit plugin:dev --watch",
     "test": "TZ=UTC grafana-toolkit plugin:test",
     "build": "grafana-toolkit plugin:build",
-    "ci-build": "yarn lint && grafana-toolkit plugin:ci-build",
+    "ci-build": "grafana-toolkit plugin:ci-build",
     "sign": "grafana-toolkit plugin:sign"
   },
   "dependencies": {
