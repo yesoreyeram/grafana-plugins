@@ -1,19 +1,10 @@
 //#region Imports
 import React, { useState } from 'react';
-import {
-  DataSourcePlugin,
-  DataSourceJsonData,
-  DataQuery,
-  DataSourceInstanceSettings,
-  DataSourcePluginOptionsEditorProps,
-  QueryEditorProps,
-  MetricFindValue,
-  ScopedVars,
-} from '@grafana/data';
+import { DataSourcePlugin, DataSourceJsonData, DataQuery, DataSourceInstanceSettings, DataSourcePluginOptionsEditorProps, QueryEditorProps, MetricFindValue, ScopedVars } from '@grafana/data';
 import { InlineFormLabel, Input, Select, Button } from '@grafana/ui';
 import { DataSourceWithBackend, getTemplateSrv } from '@grafana/runtime';
 //#endregion
-//#region Types - Config
+//#region Types - Configuration
 type NameTransformMode = 'none' | 'upper_case' | 'lower_case';
 type Config = { nameTransformMode: NameTransformMode } & DataSourceJsonData;
 type SecureConfig = { apiToken: string };
@@ -41,10 +32,7 @@ type GetResourceCallGreetingsList = GetResourceCallBase<'greeting-list', {}, str
 type GetResourceCall = GetResourceCallGreetingsList;
 //#endregion
 //#region Migration and defaults
-const applyDefaultsToQuery = (
-  source_query: Partial<Query> = {},
-  instanceSettings: DataSourceInstanceSettings<Config>
-): Query => {
+const applyDefaultsToQuery = (source_query: Partial<Query> = {}, instanceSettings: DataSourceInstanceSettings<Config>): Query => {
   const query: Query = { ...source_query } as Query;
   if (!query.queryType) {
     query.queryType = 'greet';
@@ -116,11 +104,7 @@ const ConfigEditor = (props: DataSourcePluginOptionsEditorProps<Config, SecureCo
       jsonData: { ...jsonData, [option]: value },
     });
   };
-  const onSecureOptionChange = <Key extends keyof SecureConfig, Value extends SecureConfig[Key]>(
-    option: Key,
-    value: Value,
-    set: boolean
-  ) => {
+  const onSecureOptionChange = <Key extends keyof SecureConfig, Value extends SecureConfig[Key]>(option: Key, value: Value, set: boolean) => {
     onOptionsChange({
       ...options,
       secureJsonData: { ...secureJsonData, [option]: value },
@@ -181,11 +165,7 @@ export const QueryEditor = (props: QueryEditorProps<DataSource, Query, Config>) 
     <>
       <div className="gf-form">
         <InlineFormLabel>Query Type</InlineFormLabel>
-        <Select<QueryType>
-          options={[{ value: 'greet', label: 'Greeting' }]}
-          value={query.queryType || 'greet'}
-          onChange={(e) => onChange({ ...query, queryType: e.value! })}
-        />
+        <Select<QueryType> options={[{ value: 'greet', label: 'Greeting' }]} value={query.queryType || 'greet'} onChange={(e) => onChange({ ...query, queryType: e.value! })} />
       </div>
       <div className="gf-form">
         <InlineFormLabel tooltip={'Enter how the user want to be greeted'}>Greeting</InlineFormLabel>
@@ -212,11 +192,7 @@ export const QueryEditor = (props: QueryEditorProps<DataSource, Query, Config>) 
     </>
   );
 };
-const VariablesEditor = (props: {
-  query: VariableQuery;
-  onChange: (query: VariableQuery, definition: string) => void;
-  datasource: DataSource;
-}) => {
+const VariablesEditor = (props: { query: VariableQuery; onChange: (query: VariableQuery, definition: string) => void; datasource: DataSource }) => {
   const { query, onChange } = props;
   return (
     <>
@@ -233,8 +209,5 @@ const VariablesEditor = (props: {
 };
 //#endregion
 //#region Module
-export const plugin = new DataSourcePlugin<DataSource, Query, Config, SecureConfig>(DataSource)
-  .setConfigEditor(ConfigEditor)
-  .setQueryEditor(QueryEditor)
-  .setVariableQueryEditor(VariablesEditor);
+export const plugin = new DataSourcePlugin<DataSource, Query, Config, SecureConfig>(DataSource).setConfigEditor(ConfigEditor).setQueryEditor(QueryEditor).setVariableQueryEditor(VariablesEditor);
 //#endregion

@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  DataSourcePlugin,
-  DataSourceJsonData,
-  DataQuery,
-  DataSourceInstanceSettings,
-  MetricFindValue,
-} from '@grafana/data';
+import { DataSourcePlugin, DataSourceJsonData, DataQuery, DataSourceInstanceSettings, MetricFindValue } from '@grafana/data';
 import { DataSourceWithBackend } from '@grafana/runtime';
 
 type Config = {} & DataSourceJsonData;
@@ -30,7 +24,4 @@ const ConfigEditor = () => <>Zero Config Editor</>;
 const QueryEditor = () => <>Zero Query Editor</>;
 const VariablesEditor = () => <>Zero Variable Editor</>;
 
-export const plugin = new DataSourcePlugin<DataSource, Query, Config, SecureConfig>(DataSource)
-  .setConfigEditor(ConfigEditor)
-  .setQueryEditor(QueryEditor)
-  .setVariableQueryEditor(VariablesEditor);
+export const plugin = new DataSourcePlugin<DataSource, Query, Config, SecureConfig>(DataSource).setConfigEditor(ConfigEditor).setQueryEditor(QueryEditor).setVariableQueryEditor(VariablesEditor);
