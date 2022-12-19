@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
-  "id": "yesoreyeram-zero-datasource",
-  "name": "Zero",
+  "id": "yesoreyeram-blank-datasource",
+  "name": "Blank",
   "type": "datasource",
   "backend": true,
   "metrics": true,
   "annotations": true,
   "alerting": true,
-  "executable": "gpx-yesoreyeram-zero-datasource",
+  "executable": "gpx-yesoreyeram-blank-datasource",
   "info": {
     "version": "%VERSION%",
     "updated": "%TODAY%",
-    "description": "Does almost zero thing",
+    "description": "Blank datasource plugin and does nothing",
     "author": {
       "name": "Sriramajeyam Sugumaran"
     },

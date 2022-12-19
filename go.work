@@ -2,6 +2,6 @@ go 1.19
 
 use (
 	./anyframer
+	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
-	./plugins/yesoreyeram-zero-datasource
 )

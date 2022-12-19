@@ -1,5 +1,5 @@
 {
-  "name": "yesoreyeram-zero-datasource",
+  "name": "yesoreyeram-blank-datasource",
   "version": "0.0.1",
   "scripts": {
     "clean": "rm -rf dist/",

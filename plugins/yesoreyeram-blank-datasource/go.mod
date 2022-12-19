@@ -1,4 +1,4 @@
-module github.com/yesoreyeram/grafana-plugins/yesoreyeram-zero-datasource
+module github.com/yesoreyeram/grafana-plugins/yesoreyeram-blank-datasource
 
 go 1.19
 

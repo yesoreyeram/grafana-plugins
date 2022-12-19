@@ -20,8 +20,8 @@ class DataSource extends DataSourceWithBackend<Query, Config> {
   }
 }
 
-const ConfigEditor = () => <>Zero Config Editor</>;
-const QueryEditor = () => <>Zero Query Editor</>;
-const VariablesEditor = () => <>Zero Variable Editor</>;
+const ConfigEditor = () => <>Blank Config Editor</>;
+const QueryEditor = () => <>Blank Query Editor</>;
+const VariablesEditor = () => <>Blank Variable Editor</>;
 
 export const plugin = new DataSourcePlugin<DataSource, Query, Config, SecureConfig>(DataSource).setConfigEditor(ConfigEditor).setQueryEditor(QueryEditor).setVariableQueryEditor(VariablesEditor);

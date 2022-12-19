@@ -2,15 +2,15 @@ package main
 
 import (
 	"context"
-	"errors"
 	"os"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/instancemgmt"
+	"github.com/grafana/grafana-plugin-sdk-go/data"
 )
 
-const PluginId = "yesoreyeram-zero-datasource"
+const PluginId = "yesoreyeram-blank-datasource"
 
 type DatasourceInstance struct{}
 type PluginHost struct{ IM instancemgmt.InstanceManager }
@@ -20,16 +20,21 @@ func (ins *DatasourceInstance) Dispose() {
 }
 func (ds *PluginHost) CheckHealth(ctx context.Context, req *backend.CheckHealthRequest) (*backend.CheckHealthResult, error) {
 	return &backend.CheckHealthResult{
-		Status:  backend.HealthStatusError,
-		Message: "zero datasource health check not implemented",
+		Status:  backend.HealthStatusOk,
+		Message: "blank datasource just works but does nothing",
 	}, nil
 }
 func (ds *PluginHost) QueryData(ctx context.Context, req *backend.QueryDataRequest) (*backend.QueryDataResponse, error) {
 	response := backend.NewQueryDataResponse()
 	for _, q := range req.Queries {
+		frame := data.NewFrame(
+			q.QueryType, data.NewField("response", nil, []string{"blank response"}),
+		).SetMeta(
+			&data.FrameMeta{Notices: []data.Notice{{Text: "blank query works. but not fully implemented"}}},
+		)
 		response.Responses[q.RefID] = backend.DataResponse{
-			Error:  errors.New("zero datasource query not implemented"),
-			Status: backend.StatusNotImplemented,
+			Frames: data.Frames{frame},
+			Status: backend.StatusOK,
 		}
 	}
 	return response, nil
