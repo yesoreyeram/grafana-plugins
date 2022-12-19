@@ -1,0 +1,50 @@
+name: Test
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+jobs:
+  test-and-build:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        grafana-version: [8.4.7]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: NodeJS setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.16.0
+      - name: Install frontend dependencies
+        run: |
+          yarn install --frozen-lockfile;
+      - name: Setup Go environment
+        uses: actions/setup-go@v2
+        with:
+          go-version: "1.19.4"
+      - name: Install Mage
+        run: |
+          go install github.com/magefile/mage
+      - name: Check mage
+        run: |
+          mage -version
+      - name: Test backend
+        run: |
+          yarn test:backend
+      - name: Build backend
+        run: |
+          yarn build:backend
+      - name: Test frontend
+        run: |
+          yarn test
+      - name: Build frontend
+        run: |
+          yarn build
+      - name: List artifacts
+        run: |
+          ls -lh plugins/yesoreyeram-*/dist/;
