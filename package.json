@@ -25,6 +25,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@grafana/sign-plugin": "^0.0.2",
     "@grafana/toolkit": "8.4.7",
     "@grafana/tsconfig": "^1.2.0-rc1",
     "@testing-library/jest-dom": "^5.16.4",

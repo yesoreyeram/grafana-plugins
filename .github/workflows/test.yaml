@@ -45,6 +45,9 @@ jobs:
       - name: Build frontend
         run: |
           yarn build
+      - name: Sign plugin artifacts
+        run: |
+          yarn sign;
       - name: List artifacts
         run: |
           ls -lh plugins/yesoreyeram-*/dist/;

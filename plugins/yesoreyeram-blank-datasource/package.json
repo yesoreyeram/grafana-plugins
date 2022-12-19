@@ -11,7 +11,7 @@
     "test:backend": "go test -v  ./...",
     "lint:backend": "mage -v lint",
     "ci-build": "grafana-toolkit plugin:ci-build",
-    "sign": "grafana-toolkit plugin:sign"
+    "sign": "npx @grafana/sign-plugin --rootUrls http://localhost:3000"
   },
   "dependencies": {
     "@grafana/data": "9.1.3",
