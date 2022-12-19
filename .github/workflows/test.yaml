@@ -48,6 +48,8 @@ jobs:
       - name: Sign plugin artifacts
         run: |
           yarn sign;
+        env:
+          GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
       - name: List artifacts
         run: |
           ls -lh plugins/yesoreyeram-*/dist/;
