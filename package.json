@@ -20,6 +20,8 @@
     "test:backend": "turbo run test:backend",
     "lint:backend": "turbo run lint:backend",
     "ci-build": "turbo run ci-build",
+    "cypress": "./node_modules/cypress/bin/cypress",
+    "e2e": "yarn cypress run",
     "sign": "turbo run sign",
     "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\""
   },
@@ -31,6 +33,8 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "12.1.2",
     "cspell": "^6.14.3",
+    "cypress": "^10.10.0",
+    "typescript": "^4.8.4",
     "turbo": "^1.6.3"
   }
 }

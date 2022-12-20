@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: NodeJS setup
         uses: actions/setup-node@v1
         with:
@@ -64,17 +64,19 @@ jobs:
         grVersion: ["8.4.7", "latest", "main"]
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+      - name: NodeJS setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.16.0
+      - name: Install frontend dependencies
+        run: |
+          yarn install --frozen-lockfile;
       - name: Download artifacts from previous job
         uses: actions/download-artifact@v3
         with:
           name: plugins-artifacts
           path: plugins
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: plugins
-      - name: Display all files in current folder
-        run: pwd && ls -lh;
       - name: Start the docker container for e2e
         run: |
           docker-compose pull
@@ -89,7 +91,7 @@ jobs:
           timeout: 20000
           interval: 500
       - name: Run E2E
-        run: echo "e2e placeholder"
+        run: yarn e2e
       - name: Stop the docker container
         if: always()
         run: docker-compose down
