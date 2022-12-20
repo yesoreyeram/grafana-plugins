@@ -45,11 +45,11 @@ jobs:
       - name: Build frontend
         run: |
           yarn build
-      - name: Sign plugin artifacts
-        run: |
-          yarn sign;
-        env:
-          GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
+      # - name: Sign plugin artifacts
+      #   run: |
+      #     yarn sign;
+      #   env:
+      #     GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
       - name: Plugin artifacts
         uses: actions/upload-artifact@v3
         with:
