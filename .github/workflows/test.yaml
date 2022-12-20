@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.16.0
+      - name: Spellcheck
+        run: |
+          yarn spellcheck;
       - name: Install frontend dependencies
         run: |
           yarn install --frozen-lockfile;
@@ -50,6 +53,37 @@ jobs:
           yarn sign;
         env:
           GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
-      - name: List artifacts
+      - name: Plugin artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: plugins-artifacts
+          path: plugins/yesoreyeram-*/dist/*
+  e2e:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        grafana-version: [8.4.7]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download artifacts from previous job
+        uses: actions/download-artifact@v3
+        with:
+          name: plugins-artifacts
+          path: plugins
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: plugins
+      - name: Display all files in current folder
+        run: pwd && ls -lh;
+  publish:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        grafana-version: [8.4.7]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Publish
         run: |
-          ls -lh plugins/yesoreyeram-*/dist/;
+          echo "Publish to github release"
