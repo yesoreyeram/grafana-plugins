@@ -77,6 +77,12 @@ jobs:
         with:
           name: plugins-artifacts
           path: plugins
+      - name: list artifacts;
+        run: |
+          ls -lh;
+          ls -ls plugins/;
+          ls -lh plugins/yesoreyeram-**;
+          ls -lh plugins/yesoreyeram-**/dist;
       - name: Start the docker container for e2e
         run: |
           docker-compose pull
@@ -95,6 +101,14 @@ jobs:
       - name: Stop the docker container
         if: always()
         run: docker-compose down
+      - name: Store E2E artifacts
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: e2e-artifacts-${{ matrix.grVersion }}
+          path: |
+            cypress/videos
+            cypress/screenshots
   publish:
     runs-on: ubuntu-20.04
     needs: e2e
