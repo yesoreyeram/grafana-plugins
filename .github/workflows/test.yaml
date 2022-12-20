@@ -20,12 +20,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.16.0
-      - name: Spellcheck
-        run: |
-          yarn spellcheck;
       - name: Install frontend dependencies
         run: |
           yarn install --frozen-lockfile;
+      - name: Spellcheck
+        run: |
+          yarn spellcheck;
       - name: Setup Go environment
         uses: actions/setup-go@v2
         with:
@@ -60,6 +60,7 @@ jobs:
           path: plugins/yesoreyeram-*/dist/*
   e2e:
     runs-on: ubuntu-20.04
+    needs: test-and-build
     strategy:
       matrix:
         grafana-version: [8.4.7]
@@ -78,6 +79,7 @@ jobs:
         run: pwd && ls -lh;
   publish:
     runs-on: ubuntu-20.04
+    needs: e2e
     strategy:
       matrix:
         grafana-version: [8.4.7]
