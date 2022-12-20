@@ -77,12 +77,9 @@ jobs:
         with:
           name: plugins-artifacts
           path: plugins
-      - name: list artifacts;
+      - name: Change permissions on executables;
         run: |
-          ls -lh;
-          ls -ls plugins/;
-          ls -lh plugins/yesoreyeram-**;
-          ls -lh plugins/yesoreyeram-**/dist;
+          chmod +x plugins/yesoreyeram-**/dist/gpx*;
       - name: Start the docker container for e2e
         run: |
           docker-compose pull
