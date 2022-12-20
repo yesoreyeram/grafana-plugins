@@ -10,9 +10,6 @@ concurrency:
 jobs:
   test-and-build:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        grafana-version: [8.4.7]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -62,8 +59,9 @@ jobs:
     runs-on: ubuntu-20.04
     needs: test-and-build
     strategy:
+      fail-fast: false
       matrix:
-        grafana-version: [8.4.7]
+        grVersion: ["8.4.7", "latest", "main"]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -77,15 +75,35 @@ jobs:
         working-directory: plugins
       - name: Display all files in current folder
         run: pwd && ls -lh;
+      - name: Start the docker container for e2e
+        run: |
+          docker-compose pull
+          docker-compose up -d
+        env:
+          GR_VERSION: ${{ matrix.grVersion }}
+      - name: wait for grafana to start
+        uses: nev7n/wait_for_response@v1
+        with:
+          url: "http://localhost:3000/"
+          responseCode: 200
+          timeout: 20000
+          interval: 500
+      - name: Run E2E
+        run: echo "e2e placeholder"
+      - name: Stop the docker container
+        if: always()
+        run: docker-compose down
   publish:
     runs-on: ubuntu-20.04
     needs: e2e
-    strategy:
-      matrix:
-        grafana-version: [8.4.7]
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: Download artifacts from previous job
+        uses: actions/download-artifact@v3
+        with:
+          name: plugins-artifacts
+          path: plugins
       - name: Publish
         run: |
+          ls -lh;
+          ls -R plugins;
           echo "Publish to github release"
