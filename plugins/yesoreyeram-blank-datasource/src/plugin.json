@@ -19,7 +19,8 @@
     "logos": {
       "small": "logo.svg",
       "large": "logo.svg"
-    }
+    },
+    "links": [{ "name": "Github", "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-blank-datasource" }]
   },
   "dependencies": {
     "grafanaDependency": ">=9.1.3",

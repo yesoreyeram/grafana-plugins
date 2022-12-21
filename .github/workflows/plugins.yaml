@@ -1,4 +1,4 @@
-name: Test
+name: Plugins Test, Build & Publish
 on:
   pull_request:
   push:
@@ -45,11 +45,6 @@ jobs:
       - name: Build frontend
         run: |
           yarn build
-      # - name: Sign plugin artifacts
-      #   run: |
-      #     yarn sign;
-      #   env:
-      #     GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
       - name: Plugin artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -110,13 +105,30 @@ jobs:
     runs-on: ubuntu-20.04
     needs: e2e
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: NodeJS setup
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.16.0
+      - name: Install frontend dependencies
+        run: |
+          yarn install --frozen-lockfile;
       - name: Download artifacts from previous job
         uses: actions/download-artifact@v3
         with:
           name: plugins-artifacts
           path: plugins
+      - name: Change permissions on executables;
+        run: |
+          chmod +x plugins/yesoreyeram-**/dist/gpx*;
+      - name: Sign plugin artifacts
+        run: |
+          yarn sign;
+        env:
+          GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
       - name: Publish
         run: |
           ls -lh;
-          ls -R plugins;
+          ls -lhR plugins/yesoreyeram*/dist;
           echo "Publish to github release"

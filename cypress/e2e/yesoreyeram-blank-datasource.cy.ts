@@ -7,7 +7,6 @@ import { uuid } from "./utils/uuid";
 
 describe("yesoreyeram-blank-datasource", () => {
   it("new datasource instance should work without error", () => {
-    cy.viewport(1792, 1017);
     login();
     addDataSource(
       "Blank",
@@ -16,7 +15,6 @@ describe("yesoreyeram-blank-datasource", () => {
     );
   });
   it("provisioned datasources should work without error", () => {
-    cy.viewport(1792, 1017);
     login();
     validateProvisionedDatasource(
       "Blank",

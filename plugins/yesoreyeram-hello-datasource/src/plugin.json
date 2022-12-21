@@ -19,7 +19,8 @@
     "logos": {
       "small": "logo.svg",
       "large": "logo.svg"
-    }
+    },
+    "links": [{ "name": "Github", "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-hello-datasource" }]
   },
   "dependencies": {
     "grafanaDependency": ">=8.4.7",
