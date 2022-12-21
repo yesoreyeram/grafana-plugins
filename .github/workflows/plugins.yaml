@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: NodeJS setup
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.16.0
       - name: Install frontend dependencies
@@ -24,7 +24,7 @@ jobs:
         run: |
           yarn spellcheck;
       - name: Setup Go environment
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: "1.19.4"
       - name: Install Mage
@@ -61,7 +61,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: NodeJS setup
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.16.0
       - name: Install frontend dependencies
@@ -108,7 +108,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: NodeJS setup
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.16.0
       - name: Install frontend dependencies
