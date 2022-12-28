@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "workspaces": [
+    "restds/*",
     "plugins/*"
   ],
   "description": "My experiments with Grafana plugins.",
@@ -22,6 +23,7 @@
     "ci-build": "turbo run ci-build",
     "cypress": "./node_modules/cypress/bin/cypress",
     "e2e": "yarn cypress run",
+    "e2e:open": "yarn cypress open",
     "sign": "turbo run sign",
     "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\""
   },

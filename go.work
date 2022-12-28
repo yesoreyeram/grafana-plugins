@@ -2,6 +2,8 @@ go 1.19
 
 use (
 	./anyframer
+	./restds
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
+	./plugins/yesoreyeram-vercel-datasource
 )

@@ -1,5 +1,4 @@
 //go:build mage
-// +build mage
 
 package main
 
@@ -7,11 +6,7 @@ import (
 	"fmt"
 )
 
-// Default target to run when none is specified
-// If not set, running mage will list available targets
-// var Default = Build
-
-// Just says hello
+// Build not implemented yet
 func Build() {
 	fmt.Println("Hello from MageFile build..!")
 	return
@@ -23,4 +18,6 @@ func Hello() {
 	return
 }
 
-var Default = Hello
+// Default target to run when none is specified
+// If not set, running mage will list available targets
+var Default = Build

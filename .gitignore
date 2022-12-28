@@ -5,5 +5,6 @@ coverage
 cypress/report.json
 cypress/screenshots/
 cypress/videos/
+provisioning/datasources/real.yaml
 .turbo
 mage_output_file.go

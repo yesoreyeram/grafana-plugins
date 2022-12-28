@@ -8,3 +8,8 @@ datasources:
     type: yesoreyeram-hello-datasource
     secureJsonData:
       apiToken: hello
+  - name: Vercel
+    uid: vercel_ds_default
+    type: yesoreyeram-vercel-datasource
+    secureJsonData:
+      apiToken: xxxxxxxxxxxx

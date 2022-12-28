@@ -16,7 +16,7 @@
       "outputs": []
     },
     "build": {
-      "inputs": [".config/", "./plugin"],
+      "inputs": [".config/", "./plugins"],
       "outputs": ["dist/**"]
     },
     "ci-build": {

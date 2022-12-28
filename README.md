@@ -6,6 +6,7 @@ My experiments with [Grafana](https://grafana.com) [plugins](https://grafana.com
 
 - [yesoreyeram-blank-datasource](./plugins/yesoreyeram-blank-datasource/)
 - [yesoreyeram-hello-datasource](./plugins/yesoreyeram-hello-datasource/)
+- [yesoreyeram-vercel-datasource](./plugins/yesoreyeram-vercel-datasource)
 
 ## Included go packages
 
