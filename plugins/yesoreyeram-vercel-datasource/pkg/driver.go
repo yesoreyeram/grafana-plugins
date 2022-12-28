@@ -9,12 +9,14 @@ import (
 	"github.com/yesoreyeram/grafana-plugins/restds"
 )
 
+type VercelConfig struct {
+	BaseURL string `json:"apiUrl,omitempty"`
+}
+
 type VercelRestDriver struct{}
 
 func (v *VercelRestDriver) LoadConfig(settings backend.DataSourceInstanceSettings) (*restds.Config, error) {
-	config := &struct {
-		BaseURL string `json:"apiUrl,omitempty"`
-	}{
+	config := &VercelConfig{
 		BaseURL: "https://api.vercel.com",
 	}
 	configJson := settings.JSONData
