@@ -2,6 +2,7 @@ package restds
 
 import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
+	"github.com/swaggest/openapi-go/openapi3"
 )
 
 type RestDriverOptions struct {
@@ -13,4 +14,5 @@ type RestDriverOptions struct {
 
 type RestDriver interface {
 	LoadConfig(settings backend.DataSourceInstanceSettings) (*Config, error)
+	LoadSpec() openapi3.Spec
 }

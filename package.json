@@ -18,6 +18,7 @@
     "build": "turbo run build",
     "build:backend": "turbo run build:backend",
     "build:all": "turbo run build:all",
+    "build:full": "turbo run build:all --force",
     "test:backend": "turbo run test:backend",
     "lint:backend": "turbo run lint:backend",
     "ci-build": "turbo run ci-build",

@@ -13,7 +13,7 @@ import (
 )
 
 func GetRequest(config Config, query Query, headersFromGrafana map[string]string) (*http.Request, error) {
-	acceptHeader := "application/json;q=0.9,text/plain"
+	acceptHeader := "application/json"
 	contentTypeHeader := "application/json"
 	var body io.Reader
 	if strings.EqualFold(http.MethodPost, string(query.Method)) {
@@ -51,7 +51,7 @@ func GetRequest(config Config, query Query, headersFromGrafana map[string]string
 			body = strings.NewReader(query.Body)
 		}
 	}
-	req, err := http.NewRequest(string(query.Method), normalizeURL(query.URL), body)
+	req, err := http.NewRequest(strings.ToUpper(string(query.Method)), normalizeURL(query.URL), body)
 	if err != nil {
 		return req, err
 	}

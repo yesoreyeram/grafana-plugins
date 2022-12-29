@@ -6,7 +6,10 @@
         "httpadapter",
         "httpclient",
         "instancemgmt",
+        "openapi",
         "restds",
+        "stretchr",
+        "swaggest",
         "yesoreyeram"
     ]
 }
