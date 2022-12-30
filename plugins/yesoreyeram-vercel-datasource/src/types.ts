@@ -19,12 +19,13 @@ export type OpenAPI3Query = {
   body?: string;
   bodyContentType?: string;
   bodyForm?: KV[];
-  openapi3: {
-    servers_url?: string;
-    servers_variables?: Record<string, string>;
+  builder_options: {
+    server_url?: string;
+    server_variables?: Record<string, string>;
     path?: string;
     path_method?: string;
-    path_variables?: Record<string, string>;
+    path_parameters?: Record<string, string>;
+    path_operation_variables?: Record<string, string>;
   };
 };
 export type VercelQueryOpenApi3 = {

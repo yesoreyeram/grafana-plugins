@@ -1,10 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { InlineFormLabel, Input, Select } from '@grafana/ui';
-import { buildQuery } from './../app/openapi';
 import type { QueryEditorProps } from '@grafana/data/types';
 import type { VercelDS } from './../datasource';
-import type { OpenAPI3Spec, OpenAPI3SpecPaths, OpenAPI3SpecServer, OpenAPI3SpecServerVariable } from './../types/openapi';
+import type { OpenAPI3Spec } from './../types/openapi';
 import type { VercelQuery, VercelConfig, VercelQueryOpenApi3 } from './../types';
+
+const buildQuery = (baseSpec: OpenAPI3Spec, newQuery: VercelQueryOpenApi3): VercelQuery => {
+  const currentSpec = newQuery?.builder_options || {};
+  let serverUrl = currentSpec.server_url;
+  if (!serverUrl) {
+    serverUrl = baseSpec.servers && baseSpec.servers[0].url;
+  }
+  const baseServer = (baseSpec.servers || []).find((s) => s.url === serverUrl);
+  let u = `${baseServer?.url || ''}${currentSpec.path || ''}`;
+  Object.keys(baseServer?.variables || {}).forEach((k) => {
+    const selectedVariable = baseServer?.variables && baseServer.variables[k];
+    let selectedValue = currentSpec.server_variables && currentSpec.server_variables[k] ? currentSpec.server_variables[k] : selectedVariable?.default;
+    u = u.replace(`{${k}}`, selectedValue || '');
+  });
+  let method = (currentSpec.path_method || 'GET') as typeof newQuery.method;
+  return { ...newQuery, url: u, method };
+};
 
 type VercelQueryEditorProps = {} & QueryEditorProps<VercelDS, VercelQuery, VercelConfig>;
 
@@ -44,20 +60,17 @@ const OpenSpec3Editor = (props: { spec: OpenAPI3Spec; query: VercelQueryOpenApi3
   const { spec, query, onChange } = props;
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
-      <OpenSpecServersEditor servers={spec?.servers || []} query={query} onChange={onChange} />
-      <PathEditor paths={spec?.paths || {}} query={query} onChange={onChange} />
+      <OpenSpecServersEditor spec={spec} query={query} onChange={onChange} />
+      <PathEditor spec={spec} query={query} onChange={onChange} />
       <RootSelector query={query} onChange={onChange} />
     </div>
   );
 };
 
-const OpenSpecServersEditor = (props: { servers: OpenAPI3SpecServer[]; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
-  const { servers, query, onChange } = props;
-  const [server, setServer] = useState<string>(query.openapi3?.servers_url || servers[0].url);
-  if (servers.length < 1) {
-    return <></>;
-  }
-  const serverUrls = servers.map((s) => ({ value: s.url, label: s.url }));
+const OpenSpecServersEditor = (props: { spec: OpenAPI3Spec; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
+  const { spec, query, onChange } = props;
+  const [selectedServer, setSelectedServer] = useState<string>(query.builder_options?.server_url || '');
+  const serverUrls = (spec.servers || []).map((s) => ({ value: s.url, label: s.url, description: s.description }));
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '5px' }}>
@@ -65,50 +78,21 @@ const OpenSpecServersEditor = (props: { servers: OpenAPI3SpecServer[]; query: Ve
         <Select
           options={serverUrls}
           onChange={(s) => {
-            setServer(s.value!);
-            onChange({ ...query, openapi3: { ...query.openapi3, servers_url: s.value } });
+            setSelectedServer(s.value!);
+            onChange({ ...query, builder_options: { ...query.builder_options, server_url: s.value } });
           }}
-          value={server}
+          value={selectedServer}
         />
       </div>
-      {servers
-        .filter((s) => s.url === server)
-        .map((s) => {
-          return <OpenSpecServersVariablesEditor key={JSON.stringify(s)} variables={s.variables || {}} query={query} onChange={onChange} />;
-        })}
     </>
   );
 };
 
-const OpenSpecServersVariablesEditor = (props: { variables: OpenAPI3SpecServerVariable; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
-  const { variables: spec_variables, query, onChange } = props;
-  const { openapi3 } = query;
-  const { servers_variables = {} } = openapi3 || {};
-  const keys = Object.keys(spec_variables);
-  return (
-    <>
-      {keys.map((k) => {
-        return (
-          <div style={{ display: 'flex', justifyContent: 'space-between', gap: '5px' }} key={JSON.stringify(k)}>
-            <InlineFormLabel width={10} tooltip={spec_variables[k].description || k}>
-              {k}
-            </InlineFormLabel>
-            <Input
-              placeholder={spec_variables[k].default}
-              value={servers_variables[k]}
-              onChange={(e) => onChange({ ...query, openapi3: { ...query.openapi3, servers_variables: { ...servers_variables, [k]: e.currentTarget.value || spec_variables[k].default } } })}
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
-
-const PathEditor = (props: { paths: OpenAPI3SpecPaths; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
-  const { query, onChange, paths } = props;
-  const [selectedPath, setSelectedPath] = useState(query.openapi3?.path || '');
-  const [selectedMethod, setSelectedMethod] = useState(query.openapi3?.path_method || 'get');
+const PathEditor = (props: { spec: OpenAPI3Spec; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
+  const { query, onChange, spec } = props;
+  const { paths = {} } = spec;
+  const [selectedPath, setSelectedPath] = useState(query.builder_options?.path || '');
+  const [selectedMethod, setSelectedMethod] = useState(query.builder_options?.path_method || 'get');
   const pathOptions = Object.keys(paths).map((p) => ({ value: p, description: paths[p].summary || paths[p].description || p, label: p }));
   const methodOptions = Object.keys(paths[selectedPath] || { get: {} })
     .filter((p) => p.toLowerCase() === 'get' || p.toLowerCase() === 'post')
@@ -123,7 +107,7 @@ const PathEditor = (props: { paths: OpenAPI3SpecPaths; query: VercelQueryOpenApi
           onChange={(e) => {
             if (e?.value) {
               setSelectedPath(e.value!);
-              onChange({ ...query, openapi3: { ...query.openapi3, path: e.value } });
+              onChange({ ...query, builder_options: { ...query.builder_options, path: e.value } });
             }
           }}
         ></Select>
@@ -134,7 +118,7 @@ const PathEditor = (props: { paths: OpenAPI3SpecPaths; query: VercelQueryOpenApi
           onChange={(e) => {
             if (e?.value) {
               setSelectedMethod(e.value!);
-              onChange({ ...query, openapi3: { ...query.openapi3, path_method: e.value } });
+              onChange({ ...query, builder_options: { ...query.builder_options, path_method: e.value } });
             }
           }}
         ></Select>
@@ -142,6 +126,59 @@ const PathEditor = (props: { paths: OpenAPI3SpecPaths; query: VercelQueryOpenApi
     </>
   );
 };
+
+// const OpenSpecServersVariablesEditor = (props: { variables: OpenAPI3SpecServerVariable; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
+//   const { variables: spec_variables, query, onChange } = props;
+//   const { openapi3 } = query;
+//   const { servers_variables = {} } = openapi3 || {};
+//   const keys = Object.keys(spec_variables);
+//   return (
+//     <>
+//       {keys.map((k) => {
+//         return (
+//           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '5px' }} key={JSON.stringify(k)}>
+//             <InlineFormLabel width={10} tooltip={spec_variables[k].description || k}>
+//               {k}
+//             </InlineFormLabel>
+//             <Input
+//               placeholder={spec_variables[k].default}
+//               value={servers_variables[k]}
+//               onChange={(e) => onChange({ ...query, openapi3: { ...query.openapi3, servers_variables: { ...servers_variables, [k]: e.currentTarget.value || spec_variables[k].default } } })}
+//             />
+//           </div>
+//         );
+//       })}
+//     </>
+//   );
+// };
+
+// const OpenSpecParamVariables = (props: { spec: OpenAPI3Spec; query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
+//   const { spec, query, onChange } = props;
+//   const server_params: (OpenAPI3SpecServerVariableValue | OA3ParameterObject)[] = [];
+//   const selectedServer = (spec.servers || []).find((s) => s.url === query.openapi3?.servers_url);
+//   if (selectedServer) {
+//     Object.keys(selectedServer.variables || {}).forEach((k) => {
+//       if (selectedServer.variables && selectedServer.variables[k]) {
+//         server_params.push(selectedServer.variables[k]);
+//       }
+//     });
+//   }
+//   const path_params: OA3ParameterObject[] = [];
+//   if (query.openapi3?.path) {
+//     const selectedPath = (spec.paths || {})[query.openapi3?.path];
+//     const selectedMethod = query.openapi3?.path_method || 'get';
+//     let selectedParams = (spec.paths || {})[query.openapi3?.path]['get'];
+//     if (query.openapi3?.path_method === 'post') {
+//       selectedParams = (spec.paths || {})[query.openapi3?.path]['post'];
+//     }
+//     if (selectedParams && selectedParams.parameters) {
+//       selectedParams.parameters.forEach((p) => {
+//         path_params.push(p);
+//       });
+//     }
+//   }
+//   return <></>;
+// };
 
 const RootSelector = (props: { query: VercelQueryOpenApi3; onChange: (value: VercelQuery) => void }) => {
   const { query, onChange } = props;

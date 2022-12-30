@@ -11,3 +11,4 @@ My experiments with [Grafana](https://grafana.com) [plugins](https://grafana.com
 ## Included go packages
 
 - [anyframer](./anyframer/)
+- [restds](./restds/)
