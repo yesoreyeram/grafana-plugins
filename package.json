@@ -1,15 +1,43 @@
 {
   "name": "@yesoreyeram/grafana-plugins",
   "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "restds/*",
+    "plugins/*"
+  ],
   "description": "My experiments with Grafana plugins.",
   "keywords": [],
   "author": "Sriramajeyam Sugumaran",
   "license": "MIT",
   "scripts": {
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "watch": "turbo run watch",
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "build:backend": "turbo run build:backend",
+    "build:all": "turbo run build:all",
+    "build:full": "turbo run build:all --force",
+    "test:backend": "turbo run test:backend",
+    "lint:backend": "turbo run lint:backend",
+    "ci-build": "turbo run ci-build",
+    "cypress": "./node_modules/cypress/bin/cypress",
+    "e2e": "yarn cypress run",
+    "e2e:open": "yarn cypress open",
+    "sign": "turbo run sign",
     "spellcheck": "cspell -c cspell.config.json \"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}\""
   },
   "dependencies": {},
   "devDependencies": {
-    "cspell": "^6.14.3"
+    "@grafana/sign-plugin": "^0.0.2",
+    "@grafana/toolkit": "8.4.7",
+    "@grafana/tsconfig": "^1.2.0-rc1",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "12.1.2",
+    "cspell": "^6.14.3",
+    "cypress": "^10.10.0",
+    "typescript": "^4.8.4",
+    "turbo": "^1.6.3"
   }
 }

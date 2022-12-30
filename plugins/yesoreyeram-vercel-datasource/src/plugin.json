@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-vercel-datasource",
+  "name": "Vercel",
+  "type": "datasource",
+  "backend": true,
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-vercel-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "Vercel datasource plugin for Grafana",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
+    "keywords": ["yesoreyeram", "vercel"],
+    "logos": {
+      "small": "img/vercel-icon-dark.svg",
+      "large": "img/vercel-icon-dark.svg"
+    },
+    "links": [{ "name": "Github", "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-vercel-datasource" }]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=8.4.7",
+    "grafanaVersion": "8.4.7",
+    "plugins": []
+  }
+}

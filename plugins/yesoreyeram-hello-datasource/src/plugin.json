@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-hello-datasource",
+  "name": "Hello",
+  "type": "datasource",
+  "backend": true,
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-hello-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "Simple grafana plugin to greet the user",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
+    "keywords": ["yesoreyeram"],
+    "logos": {
+      "small": "logo.svg",
+      "large": "logo.svg"
+    },
+    "links": [{ "name": "Github", "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-hello-datasource" }]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=8.4.7",
+    "grafanaVersion": "8.4.7",
+    "plugins": []
+  }
+}

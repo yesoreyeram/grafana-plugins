@@ -1,0 +1,5 @@
+github.com/magefile/mage v1.13.0 h1:XtLJl8bcCM7EFoO8FyH8XK3t7G5hQAeK+i4tq+veT9M=
+github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313/go.mod h1:2wBri9DNpmznBip4s1sqf5SdolEXkGbdaZN6hl4eino=
+github.com/yesoreyeram/jsonata-go v0.0.0-20210804121258-31e6058dd1f5/go.mod h1:uns2jymDrnI7y+UFYCqsRTEiAH22GyHnNXrkupAVFWI=
+golang.org/x/sys v0.0.0-20220728004956-3c1f35247d10/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
+golang.org/x/term v0.0.0-20210927222741-03fcf44c2211/go.mod h1:jbD1KX2456YbFQfuXm/mYQcufACuNUgVhRMnK/tPxf8=

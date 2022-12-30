@@ -1,20 +1,36 @@
 {
   "ignorePaths": [
-    "node_modules/**",
-    "dist/**",
+    "**/node_modules/**",
+    "**/dist/**",
     "anyframer/testdata/**",
+    "provisioning/**",
     "**/*_test.go"
   ],
   "words": [
     "anyframer",
     "basgys",
+    "datasource",
+    "datasources",
+    "endregion",
+    "GOPATH",
     "goxml",
-    "Grafana",
+    "grafana",
+    "hclient",
+    "httpadapter",
+    "httpclient",
+    "instancemgmt",
     "jsonata",
-    "Sriramajeyam",
+    "magefile",
+    "openapi",
+    "petstore",
+    "restds",
+    "sriram",
+    "sriramajeyam",
     "stretchr",
-    "Sugumaran",
+    "sugumaran",
+    "swaggest",
     "testdata",
+    "vercel",
     "yesoreyeram"
   ]
 }

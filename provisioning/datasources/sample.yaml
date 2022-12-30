@@ -1,0 +1,18 @@
+apiVersion: 1
+datasources:
+  - name: Blank
+    uid: blank_ds_default
+    type: yesoreyeram-blank-datasource
+  - name: Hello
+    uid: hello_ds_default
+    type: yesoreyeram-hello-datasource
+    secureJsonData:
+      apiToken: hello
+  - name: Pet Store
+    uid: petstore_ds_default
+    type: yesoreyeram-petstore-datasource
+  - name: Vercel
+    uid: vercel_ds_default
+    type: yesoreyeram-vercel-datasource
+    secureJsonData:
+      apiToken: xxxxxxxxxxxx

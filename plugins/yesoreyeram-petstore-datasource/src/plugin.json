@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-petstore-datasource",
+  "name": "Pet Store",
+  "type": "datasource",
+  "backend": true,
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-petstore-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "Swagger Pet store datasource plugin",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
+    "keywords": ["yesoreyeram", "swagger", "pet store", "open api"],
+    "logos": {
+      "small": "logo.svg",
+      "large": "logo.svg"
+    },
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-petstore-datasource"
+      }
+    ]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=8.4.7",
+    "grafanaVersion": "8.4.7",
+    "plugins": []
+  }
+}

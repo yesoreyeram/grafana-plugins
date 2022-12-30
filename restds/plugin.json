@@ -1,0 +1,9 @@
+{
+  "name": "restds",
+  "version": "0.0.1",
+  "scripts": {
+    "build:backend": "mage -v",
+    "test:backend": "go test -v  ./...",
+    "lint:backend": "mage -v lint"
+  }
+}

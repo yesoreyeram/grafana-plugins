@@ -1,0 +1,4 @@
+{
+  "include": [".prettierrc.ts"],
+  "extends": "@grafana/tsconfig"
+}

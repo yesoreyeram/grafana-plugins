@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-blank-datasource",
+  "name": "Blank",
+  "type": "datasource",
+  "backend": true,
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-blank-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "Blank datasource plugin and does nothing",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
+    "keywords": ["yesoreyeram"],
+    "logos": {
+      "small": "logo.svg",
+      "large": "logo.svg"
+    },
+    "links": [{ "name": "Github", "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-blank-datasource" }]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=9.1.3",
+    "grafanaVersion": "9.1.3",
+    "plugins": []
+  }
+}

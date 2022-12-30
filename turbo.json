@@ -1,0 +1,45 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "clean": {
+      "cache": false,
+      "outputs": []
+    },
+    "dev": {
+      "outputs": []
+    },
+    "watch": {
+      "inputs": ["src/*.ts", "src/**/*.tsx", "src/**/*.ts"],
+      "outputs": ["dist/**"]
+    },
+    "test": {
+      "outputs": []
+    },
+    "build": {
+      "inputs": [".config/", "./plugins"],
+      "outputs": ["dist/**"]
+    },
+    "ci-build": {
+      "outputs": ["dist/**"]
+    },
+    "test:backend": {
+      "inputs": ["pkg/**/*.go"],
+      "outputs": []
+    },
+    "lint:backend": {
+      "inputs": ["pkg/**/*.go"],
+      "outputs": []
+    },
+    "build:backend": {
+      "inputs": ["pkg/**/*.go"],
+      "outputs": ["dist/gpx-**"]
+    },
+    "build:all": {
+      "dependsOn": ["build", "build:backend"]
+    },
+    "sign": {
+      "cache": false,
+      "outputs": ["dist/MANIFEST.txt"]
+    }
+  }
+}
