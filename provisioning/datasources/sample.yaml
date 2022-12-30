@@ -8,6 +8,9 @@ datasources:
     type: yesoreyeram-hello-datasource
     secureJsonData:
       apiToken: hello
+  - name: Pet Store
+    uid: petstore_ds_default
+    type: yesoreyeram-petstore-datasource
   - name: Vercel
     uid: vercel_ds_default
     type: yesoreyeram-vercel-datasource
