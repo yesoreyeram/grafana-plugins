@@ -23,15 +23,15 @@
       "outputs": ["dist/**"]
     },
     "test:backend": {
-      "inputs": ["pkg/**/*.go"],
+      "inputs": ["**/*.go"],
       "outputs": []
     },
     "lint:backend": {
-      "inputs": ["pkg/**/*.go"],
+      "inputs": ["**/*.go"],
       "outputs": []
     },
     "build:backend": {
-      "inputs": ["pkg/**/*.go"],
+      "inputs": ["**/*.go"],
       "outputs": ["dist/gpx-**"]
     },
     "build:all": {

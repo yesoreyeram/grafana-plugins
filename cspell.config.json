@@ -12,6 +12,7 @@
     "datasource",
     "datasources",
     "endregion",
+    "golangci",
     "GOPATH",
     "goxml",
     "grafana",

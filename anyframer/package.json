@@ -1,5 +1,5 @@
 {
-  "name": "restds",
+  "name": "anyframer",
   "version": "0.0.1",
   "scripts": {
     "test:backend": "go test -v  ./...",

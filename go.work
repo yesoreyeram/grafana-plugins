@@ -3,6 +3,7 @@ go 1.19
 use (
 	./anyframer
 	./restds
+	./macros
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
 	./plugins/yesoreyeram-petstore-datasource

@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "workspaces": [
-    "restds/*",
-    "plugins/*"
+    "plugins/*",
+    "macros",
+    "anyframer",
+    "restds"
   ],
   "description": "My experiments with Grafana plugins.",
   "keywords": [],
