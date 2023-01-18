@@ -1,9 +1,13 @@
 name: Plugins Test, Build & Publish
 on:
   pull_request:
+    paths:
+      - "plugins/**"
   push:
     branches:
       - main
+    paths:
+      - "plugins/**"
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
