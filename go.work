@@ -1,9 +1,9 @@
 go 1.19
 
 use (
-	./anyframer
-	./restds
-	./macros
+	./lib/go/macros
+	./lib/go/anyframer
+	./lib/go/restds
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
 	./plugins/yesoreyeram-petstore-datasource

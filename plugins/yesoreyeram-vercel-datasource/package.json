@@ -17,5 +17,8 @@
     "@grafana/data": "8.4.7",
     "@grafana/ui": "8.4.7",
     "@grafana/runtime": "8.4.7"
+  },
+  "devDependencies": {
+    "@yesoreyeram/grafana-plugins-config": "*"
   }
 }

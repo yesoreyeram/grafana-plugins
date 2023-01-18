@@ -1,10 +1,23 @@
+# packages
 node_modules
-dist
-temp
+
+# coverage
 coverage
+
+# testing
 cypress/report.json
 cypress/screenshots/
 cypress/videos/
-provisioning/datasources/real.yaml
+
+# build
 .turbo
+dist
+
+# temp files
+temp
 mage_output_file.go
+*.log
+
+# env
+.env
+data/provisioning/datasources/real.yaml

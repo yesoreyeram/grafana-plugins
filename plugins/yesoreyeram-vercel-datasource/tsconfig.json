@@ -4,5 +4,5 @@
     "baseUrl": "./src"
   },
   "include": ["./src", "./types"],
-  "extends": "./../../.config/tsconfig.json"
+  "extends": "@yesoreyeram/grafana-plugins-config/tsconfig.json"
 }

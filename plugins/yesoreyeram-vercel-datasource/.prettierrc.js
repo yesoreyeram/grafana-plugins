@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('../../.config/.prettierrc.ts'),
+  ...require('@yesoreyeram/grafana-plugins-config/.prettierrc.ts'),
 };

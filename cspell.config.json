@@ -2,8 +2,8 @@
   "ignorePaths": [
     "**/node_modules/**",
     "**/dist/**",
-    "anyframer/testdata/**",
-    "provisioning/**",
+    "lib/go/anyframer/testdata/**",
+    "data/provisioning/**",
     "**/*_test.go"
   ],
   "words": [

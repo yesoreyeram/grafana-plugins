@@ -1,23 +1,25 @@
 ---
 name: Plugin Bug report
 about: Report bug/issue specific to any plugins in the repo
-title: "[Bug] Title"
+title: "[Plugin Bug] <TITLE GOES HERE>"
 labels: bug
-assignees: ""
 ---
 
-## **Plugin Name**
+## Plugin Name
 
 Choose the applicable plugin name
 
+- [ ] applicable to all the plugins
 - [ ] yesoreyeram-blank-datasource
 - [ ] yesoreyeram-hello-datasource
+- [ ] yesoreyeram-petstore-datasource
+- [ ] yesoreyeram-vercel-datasource
 
-## **Describe the bug**
+## Describe the bug
 
 A clear and concise description of what the bug is.
 
-## **Steps to reproduce**
+## Steps to reproduce
 
 Provide steps to reproduce the issue.
 

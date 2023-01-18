@@ -1,0 +1,9 @@
+{
+  "name": "@yesoreyeram/grafana-plugins-config",
+  "version": "0.0.1",
+  "private": true,
+  "files": [
+    ".prettierrc.ts",
+    "tsconfig.json"
+  ]
+}
