@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, InlineFormLabel } from "@grafana/ui";
 
 type SecretMessageProps = {
