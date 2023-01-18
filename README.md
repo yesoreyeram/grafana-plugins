@@ -15,20 +15,6 @@ My experiments with [Grafana](https://grafana.com) [plugins](https://grafana.com
 - [anyframer](./lib/go/anyframer/)
 - [restds](./lib/go/restds/)
 
-## Pre-Requisites
+## Contributing
 
-- Git
-- NodeJS
-- Yarn
-- Go 1.19
-- Mage
-- Docker
-
-## How to run this locally
-
-- Clone the repo locally `git clone https://github.com/yesoreyeram/grafana-plugins yesoreyeram-grafana-plugins` and `cd yesoreyeram-grafana-plugins`
-- Install packages `yarn install`
-- Build frontend and backend `yarn build:full`
-- Start Grafana `docker compose up`
-- Open Grafana `http://localhost:3000` and login with credentials `grafana:grafana`
-- Visit `http://localhost:3000/datasources` to see the list of datasources
+For contributing / running the repo locally, refer the guidelines given at [CONTRIBUTING.md](./CONTRIBUTING.md).
