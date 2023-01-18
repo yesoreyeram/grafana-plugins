@@ -1,0 +1,14 @@
+{
+  "extends": "@yesoreyeram/grafana-plugins-config/tsconfig.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es6"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

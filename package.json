@@ -5,6 +5,7 @@
   "workspaces": [
     "lib/config",
     "lib/go/*",
+    "lib/ts/*",
     "plugins/*"
   ],
   "description": "My experiments with Grafana plugins.",

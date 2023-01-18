@@ -1,0 +1,17 @@
+{
+  "name": "@yesoreyeram/grafana-plugins-utils",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@yesoreyeram/grafana-plugins-config": "*"
+  }
+}

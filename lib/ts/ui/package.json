@@ -1,0 +1,20 @@
+{
+  "name": "@yesoreyeram/grafana-plugins-ui",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {
+    "@grafana/ui": "8.4.7"
+  },
+  "devDependencies": {
+    "@yesoreyeram/grafana-plugins-config": "*"
+  }
+}
