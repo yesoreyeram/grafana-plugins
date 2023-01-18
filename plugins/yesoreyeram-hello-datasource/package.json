@@ -14,6 +14,8 @@
     "sign": "npx @grafana/sign-plugin --rootUrls http://localhost:3000"
   },
   "dependencies": {
+    "@yesoreyeram/grafana-plugins-ui": "*",
+    "@yesoreyeram/grafana-plugins-utils": "*",
     "@grafana/data": "8.4.7",
     "@grafana/runtime": "8.4.7",
     "@grafana/ui": "8.4.7"

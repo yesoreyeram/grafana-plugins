@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { DataSourcePlugin, DataSourceJsonData, DataQuery, DataSourceInstanceSettings, DataSourcePluginOptionsEditorProps, QueryEditorProps, MetricFindValue, ScopedVars } from '@grafana/data';
 import { InlineFormLabel, Input, Select, Button } from '@grafana/ui';
 import { DataSourceWithBackend, getTemplateSrv } from '@grafana/runtime';
+import { SecretMessage } from '@yesoreyeram/grafana-plugins-ui';
+import { echo } from '@yesoreyeram/grafana-plugins-utils';
 //#endregion
 //#region Types - Configuration
 type NameTransformMode = 'none' | 'upper_case' | 'lower_case';
@@ -154,6 +156,7 @@ const ConfigEditor = (props: DataSourcePluginOptionsEditorProps<Config, SecureCo
           />
         )}
       </div>
+      <SecretMessage message={echo('Hello datasource plugin')} />
     </>
   );
 };
