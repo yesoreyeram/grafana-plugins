@@ -51,18 +51,13 @@ jobs:
         id: set-matrix
         run: |
           JSON="["
-          for pluginDir in $(ls ./plugins/); 
-              do 
-                  if ${{ steps.changes.outputs.yesoreyeram-blank-datasource == 'true' }}
-                      then
-                          JSONline="\"$pluginDir\","
-                          JSON="$JSON$JSONline"
-                  fi
-          done
+          if ${{ steps.changes.outputs.yesoreyeram-blank-datasource == 'true' }}; then JSON="$JSON\"yesoreyeram-blank-datasource\","; fi
+          if ${{ steps.changes.outputs.yesoreyeram-hello-datasource == 'true' }}; then JSON="$JSON\"yesoreyeram-hello-datasource\","; fi
           if [[ $JSON == *, ]]; then
               JSON="${JSON%?}"
           fi
           JSON="$JSON]"
+          echo "$JSON"
           echo "plugins=$( echo "$JSON" )" >> $GITHUB_OUTPUT
   # test-and-build:
   #   needs:
