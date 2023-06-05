@@ -1,5 +1,5 @@
 {
-  "name": "yesoreyeram-blank-datasource",
+  "name": "@yesoreyeram/grafana-blank-datasource",
   "version": "0.0.1",
   "scripts": {
     "clean": "rm -rf dist/",

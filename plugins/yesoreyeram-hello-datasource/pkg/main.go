@@ -128,8 +128,8 @@ type DatasourceInstance struct {
 
 func (is *DatasourceInstance) Dispose() {}
 
-func getInstance(im instancemgmt.InstanceManager, ctx backend.PluginContext) (*DatasourceInstance, error) {
-	instance, err := im.Get(ctx)
+func getInstance(ctx context.Context, pluginCtx backend.PluginContext, im instancemgmt.InstanceManager) (*DatasourceInstance, error) {
+	instance, err := im.Get(pluginCtx)
 	if err != nil {
 		return nil, err
 	}
@@ -157,7 +157,7 @@ type PluginHost struct {
 
 // region Plugin Host - Check Health
 func (ds *PluginHost) CheckHealth(ctx context.Context, req *backend.CheckHealthRequest) (*backend.CheckHealthResult, error) {
-	dsi, err := getInstance(ds.IM, req.PluginContext)
+	dsi, err := getInstance(ctx, req.PluginContext, ds.IM)
 	if err != nil {
 		return &backend.CheckHealthResult{
 			Status:  backend.HealthStatusError,
@@ -180,7 +180,7 @@ func (ds *PluginHost) CheckHealth(ctx context.Context, req *backend.CheckHealthR
 
 // region Plugin Host - Query Data
 func (ds *PluginHost) QueryData(ctx context.Context, req *backend.QueryDataRequest) (*backend.QueryDataResponse, error) {
-	instance, err := getInstance(ds.IM, req.PluginContext)
+	instance, err := getInstance(ctx, req.PluginContext, ds.IM)
 	if err != nil {
 		backend.Logger.Error("error getting datasource instance from plugin context")
 		return nil, fmt.Errorf("error getting datasource instance. %w", err)

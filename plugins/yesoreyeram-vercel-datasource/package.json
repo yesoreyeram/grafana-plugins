@@ -1,5 +1,5 @@
 {
-  "name": "yesoreyeram-vercel-datasource",
+  "name": "@yesoreyeram/grafana-vercel-datasource",
   "version": "0.0.1",
   "scripts": {
     "clean": "rm -rf dist/",

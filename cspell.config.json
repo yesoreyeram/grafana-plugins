@@ -9,6 +9,8 @@
   "words": [
     "anyframer",
     "basgys",
+    "clientcredentials",
+    "codegen",
     "datasource",
     "datasources",
     "endregion",
@@ -23,6 +25,7 @@
     "jsonata",
     "magefile",
     "openapi",
+    "pdts",
     "petstore",
     "restds",
     "sriram",

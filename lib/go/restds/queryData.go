@@ -10,7 +10,7 @@ import (
 )
 
 func (ds *pluginHost) QueryData(ctx context.Context, req *backend.QueryDataRequest) (*backend.QueryDataResponse, error) {
-	instance, err := getInstance(ds.IM, req.PluginContext)
+	instance, err := getInstance(ctx, req.PluginContext, ds.IM)
 	if err != nil {
 		backend.Logger.Error("error getting datasource instance from plugin context")
 		return nil, fmt.Errorf("error getting datasource instance. %w", err)

@@ -8,7 +8,7 @@ import (
 )
 
 func (ds *pluginHost) CheckHealth(ctx context.Context, req *backend.CheckHealthRequest) (*backend.CheckHealthResult, error) {
-	dsi, err := getInstance(ds.IM, req.PluginContext)
+	dsi, err := getInstance(ctx, req.PluginContext, ds.IM)
 	if err != nil {
 		return &backend.CheckHealthResult{
 			Status:  backend.HealthStatusError,

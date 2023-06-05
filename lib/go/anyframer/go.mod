@@ -1,6 +1,6 @@
 module github.com/yesoreyeram/grafana-plugins/anyframer
 
-go 1.19
+go 1.20
 
 require (
 	github.com/basgys/goxml2json v1.1.0

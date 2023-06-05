@@ -59,128 +59,128 @@ jobs:
           JSON="$JSON]"
           echo "$JSON"
           echo "plugins=$( echo "$JSON" )" >> $GITHUB_OUTPUT
-  # test-and-build:
-  #   needs:
-  #   runs-on: ubuntu-20.04
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
-  #     - name: NodeJS setup
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16.16.0
-  #     - name: Install frontend dependencies
-  #       run: |
-  #         yarn install --frozen-lockfile;
-  #     - name: Spellcheck
-  #       run: |
-  #         yarn spellcheck;
-  #     - name: Setup Go environment
-  #       uses: actions/setup-go@v3
-  #       with:
-  #         go-version: "1.19.4"
-  #     - name: Install Mage
-  #       run: |
-  #         go install github.com/magefile/mage
-  #     - name: Check mage
-  #       run: |
-  #         mage -version
-  #     - name: Test backend
-  #       run: |
-  #         yarn test:backend
-  #     - name: Build backend
-  #       run: |
-  #         yarn build:backend
-  #     - name: Test frontend
-  #       run: |
-  #         yarn test
-  #     - name: Build frontend
-  #       run: |
-  #         yarn build
-  #     - name: Plugin artifacts
-  #       uses: actions/upload-artifact@v3
-  #       with:
-  #         name: plugins-artifacts
-  #         path: plugins/yesoreyeram-*/dist/*
-  # e2e:
-  #   runs-on: ubuntu-20.04
-  #   needs: test-and-build
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       grVersion: ["8.4.7", "latest", "main"]
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
-  #     - name: NodeJS setup
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16.16.0
-  #     - name: Install frontend dependencies
-  #       run: |
-  #         yarn install --frozen-lockfile;
-  #     - name: Download artifacts from previous job
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: plugins-artifacts
-  #         path: plugins
-  #     - name: Change permissions on executables;
-  #       run: |
-  #         chmod +x plugins/yesoreyeram-**/dist/gpx*;
-  #     - name: Start the docker container for e2e
-  #       run: |
-  #         docker-compose pull
-  #         docker-compose up -d
-  #       env:
-  #         GR_VERSION: ${{ matrix.grVersion }}
-  #     - name: wait for grafana to start
-  #       uses: nev7n/wait_for_response@v1
-  #       with:
-  #         url: "http://localhost:3000/"
-  #         responseCode: 200
-  #         timeout: 20000
-  #         interval: 500
-  #     - name: Run E2E
-  #       run: yarn e2e
-  #     - name: Stop the docker container
-  #       if: always()
-  #       run: docker-compose down
-  #     - name: Store E2E artifacts
-  #       uses: actions/upload-artifact@v3
-  #       if: failure()
-  #       with:
-  #         name: e2e-artifacts-${{ matrix.grVersion }}
-  #         path: |
-  #           cypress/videos
-  #           cypress/screenshots
-  # publish:
-  #   runs-on: ubuntu-20.04
-  #   needs: e2e
-  #   steps:
-  #     - name: Checkout
-  #       uses: actions/checkout@v3
-  #     - name: NodeJS setup
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: 16.16.0
-  #     - name: Install frontend dependencies
-  #       run: |
-  #         yarn install --frozen-lockfile;
-  #     - name: Download artifacts from previous job
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: plugins-artifacts
-  #         path: plugins
-  #     - name: Change permissions on executables;
-  #       run: |
-  #         chmod +x plugins/yesoreyeram-**/dist/gpx*;
-  #     - name: Sign plugin artifacts
-  #       run: |
-  #         yarn sign;
-  #       env:
-  #         GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
-  #     - name: Publish
-  #       run: |
-  #         ls -lh;
-  #         ls -lhR plugins/yesoreyeram*/dist;
-  #         echo "Publish to github release"
+  test-and-build:
+    needs:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: NodeJS setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.16.0
+      - name: Install frontend dependencies
+        run: |
+          yarn install --frozen-lockfile;
+      - name: Spellcheck
+        run: |
+          yarn spellcheck;
+      - name: Setup Go environment
+        uses: actions/setup-go@v3
+        with:
+          go-version: "1.19.4"
+      - name: Install Mage
+        run: |
+          go install github.com/magefile/mage
+      - name: Check mage
+        run: |
+          mage -version
+      - name: Test backend
+        run: |
+          yarn test:backend
+      - name: Build backend
+        run: |
+          yarn build:backend
+      - name: Test frontend
+        run: |
+          yarn test
+      - name: Build frontend
+        run: |
+          yarn build
+      - name: Plugin artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: plugins-artifacts
+          path: plugins/yesoreyeram-*/dist/*
+  e2e:
+    runs-on: ubuntu-20.04
+    needs: test-and-build
+    strategy:
+      fail-fast: false
+      matrix:
+        gfVersion: ["8.4.7", "latest", "main"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: NodeJS setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.16.0
+      - name: Install frontend dependencies
+        run: |
+          yarn install --frozen-lockfile;
+      - name: Download artifacts from previous job
+        uses: actions/download-artifact@v3
+        with:
+          name: plugins-artifacts
+          path: plugins
+      - name: Change permissions on executables;
+        run: |
+          chmod +x plugins/yesoreyeram-**/dist/gpx*;
+      - name: Start the docker container for e2e
+        run: |
+          docker-compose pull
+          docker-compose up -d
+        env:
+          GF_VERSION: ${{ matrix.gfVersion }}
+      - name: wait for grafana to start
+        uses: nev7n/wait_for_response@v1
+        with:
+          url: "http://localhost:3000/"
+          responseCode: 200
+          timeout: 20000
+          interval: 500
+      - name: Run E2E
+        run: yarn e2e
+      - name: Stop the docker container
+        if: always()
+        run: docker-compose down
+      - name: Store E2E artifacts
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: e2e-artifacts-${{ matrix.gfVersion }}
+          path: |
+            cypress/videos
+            cypress/screenshots
+  publish:
+    runs-on: ubuntu-20.04
+    needs: e2e
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: NodeJS setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.16.0
+      - name: Install frontend dependencies
+        run: |
+          yarn install --frozen-lockfile;
+      - name: Download artifacts from previous job
+        uses: actions/download-artifact@v3
+        with:
+          name: plugins-artifacts
+          path: plugins
+      - name: Change permissions on executables;
+        run: |
+          chmod +x plugins/yesoreyeram-**/dist/gpx*;
+      - name: Sign plugin artifacts
+        run: |
+          yarn sign;
+        env:
+          GRAFANA_API_KEY: ${{ secrets.GRAFANA_API_KEY }}
+      - name: Publish
+        run: |
+          ls -lh;
+          ls -lhR plugins/yesoreyeram*/dist;
+          echo "Publish to github release"

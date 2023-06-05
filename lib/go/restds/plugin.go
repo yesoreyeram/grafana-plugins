@@ -1,6 +1,7 @@
 package restds
 
 import (
+	"context"
 	"errors"
 	"fmt"
 
@@ -18,8 +19,8 @@ type datasourceInstance struct {
 	RestDS     RestDS
 }
 
-func getInstance(im instancemgmt.InstanceManager, ctx backend.PluginContext) (*datasourceInstance, error) {
-	instance, err := im.Get(ctx)
+func getInstance(ctx context.Context, pluginCtx backend.PluginContext, im instancemgmt.InstanceManager) (*datasourceInstance, error) {
+	instance, err := im.Get(pluginCtx)
 	if err != nil {
 		return nil, err
 	}
