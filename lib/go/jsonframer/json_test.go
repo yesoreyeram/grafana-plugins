@@ -229,7 +229,7 @@ func TestJsonStringToFrame(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			gotFrame, err := jsonframer.JsonStringToFrame(tt.responseString, jsonframer.JSONFramerOptions{
+			gotFrame, err := jsonframer.ToFrame(tt.responseString, jsonframer.FramerOptions{
 				FrameName:    tt.refId,
 				RootSelector: tt.rootSelector,
 				Columns:      tt.columns,
@@ -250,7 +250,7 @@ func TestJsonStringToFrame(t *testing.T) {
 func TestAzureFrame(t *testing.T) {
 	fileContent, err := os.ReadFile("./testdata/azure/cost-management-daily.json")
 	require.Nil(t, err)
-	options := jsonframer.JSONFramerOptions{
+	options := jsonframer.FramerOptions{
 		RootSelector: "properties.rows",
 		Columns: []jsonframer.ColumnSelector{
 			{Selector: "0", Type: "number"},
@@ -262,7 +262,7 @@ func TestAzureFrame(t *testing.T) {
 	var out interface{}
 	err = json.Unmarshal(fileContent, &out)
 	require.Nil(t, err)
-	gotFrame, err := jsonframer.JsonStringToFrame(string(fileContent), options)
+	gotFrame, err := jsonframer.ToFrame(string(fileContent), options)
 	require.Nil(t, err)
 	require.NotNil(t, gotFrame)
 	experimental.CheckGoldenJSONFrame(t, "testdata/azure", "cost-management-daily", gotFrame, false)

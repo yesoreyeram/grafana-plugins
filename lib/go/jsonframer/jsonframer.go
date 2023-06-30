@@ -19,7 +19,7 @@ const (
 	FramerTypeSQLite3 FramerType = "sqlite3"
 )
 
-type JSONFramerOptions struct {
+type FramerOptions struct {
 	FramerType   FramerType // `gjson` | `sqlite3`
 	SQLite3Query string
 	FrameName    string
@@ -34,7 +34,7 @@ type ColumnSelector struct {
 	TimeFormat string
 }
 
-func JsonStringToFrame(jsonString string, options JSONFramerOptions) (frame *data.Frame, err error) {
+func ToFrame(jsonString string, options FramerOptions) (frame *data.Frame, err error) {
 	if strings.Trim(jsonString, " ") == "" {
 		return frame, errors.New("empty json received")
 	}
@@ -126,7 +126,7 @@ func getColumnValuesFromResponseString(responseString string, columns []ColumnSe
 	return responseString, nil
 }
 
-func getFrameFromResponseString(responseString string, options JSONFramerOptions) (frame *data.Frame, err error) {
+func getFrameFromResponseString(responseString string, options FramerOptions) (frame *data.Frame, err error) {
 	var out interface{}
 	err = json.Unmarshal([]byte(responseString), &out)
 	if err != nil {
