@@ -4,6 +4,8 @@ use (
 	./lib/go/macros
 	./lib/go/anyframer
 	./lib/go/restds
+	./lib/go/gframer
+	./lib/go/utils
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
 	./plugins/yesoreyeram-petstore-datasource

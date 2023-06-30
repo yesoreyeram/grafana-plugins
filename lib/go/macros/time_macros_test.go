@@ -6,7 +6,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/stretchr/testify/require"
-	"github.com/yesoreyeram/grafana-plugins/macros"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/macros"
 )
 
 func TestApplyMacros(t *testing.T) {

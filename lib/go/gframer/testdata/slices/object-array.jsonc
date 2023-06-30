@@ -1,0 +1,56 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: TestToDataFrameSlices/object-array.json
+//  Dimensions: 2 Fields by 2 Rows
+//  +------------------+-----------------+
+//  | Name: age        | Name: name      |
+//  | Labels:          | Labels:         |
+//  | Type: []*float64 | Type: []*string |
+//  +------------------+-----------------+
+//  | 12               | foo             |
+//  | 21.12            | bar             |
+//  +------------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrameSlices/object-array.json",
+        "fields": [
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            12,
+            21.12
+          ],
+          [
+            "foo",
+            "bar"
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] {
+//      "executedQueryString": "21"
+//  }
+//  Name: TestToDataFrame/integer
+//  Dimensions: 1 Fields by 1 Rows
+//  +-------------------------------+
+//  | Name: TestToDataFrame/integer |
+//  | Labels:                       |
+//  | Type: []*float64              |
+//  +-------------------------------+
+//  | 21                            |
+//  +-------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrame/integer",
+        "meta": {
+          "executedQueryString": "21"
+        },
+        "fields": [
+          {
+            "name": "TestToDataFrame/integer",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            21
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] {
+//      "executedQueryString": "true"
+//  }
+//  Name: TestToDataFrame/bool
+//  Dimensions: 1 Fields by 1 Rows
+//  +----------------------------+
+//  | Name: TestToDataFrame/bool |
+//  | Labels:                    |
+//  | Type: []*bool              |
+//  +----------------------------+
+//  | true                       |
+//  +----------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrame/bool",
+        "meta": {
+          "executedQueryString": "true"
+        },
+        "fields": [
+          {
+            "name": "TestToDataFrame/bool",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            true
+          ]
+        ]
+      }
+    }
+  ]
+}

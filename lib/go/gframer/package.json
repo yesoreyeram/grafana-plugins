@@ -1,0 +1,8 @@
+{
+  "name": "gframer",
+  "version": "0.0.1",
+  "scripts": {
+    "test:backend": "go test -v  ./...",
+    "lint:backend": "golangci-lint run ./..."
+  }
+}

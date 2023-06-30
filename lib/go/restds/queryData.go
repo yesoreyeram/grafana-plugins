@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
-	"github.com/yesoreyeram/grafana-plugins/anyframer"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/anyframer"
 )
 
 func (ds *pluginHost) QueryData(ctx context.Context, req *backend.QueryDataRequest) (*backend.QueryDataResponse, error) {

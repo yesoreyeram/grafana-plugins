@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"github.com/swaggest/openapi-go/openapi3"
-	"github.com/yesoreyeram/grafana-plugins/restds"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/restds"
 )
 
 func TestSpecFromJson(t *testing.T) {

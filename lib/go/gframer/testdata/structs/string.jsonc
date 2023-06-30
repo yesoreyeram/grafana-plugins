@@ -1,0 +1,47 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] {
+//      "executedQueryString": "foo"
+//  }
+//  Name: TestToDataFrame/string
+//  Dimensions: 1 Fields by 1 Rows
+//  +------------------------------+
+//  | Name: TestToDataFrame/string |
+//  | Labels:                      |
+//  | Type: []*string              |
+//  +------------------------------+
+//  | foo                          |
+//  +------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrame/string",
+        "meta": {
+          "executedQueryString": "foo"
+        },
+        "fields": [
+          {
+            "name": "TestToDataFrame/string",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "foo"
+          ]
+        ]
+      }
+    }
+  ]
+}

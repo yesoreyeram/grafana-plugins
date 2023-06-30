@@ -6,8 +6,8 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/grafana/grafana-plugin-sdk-go/backend/datasource"
-	"github.com/yesoreyeram/grafana-plugins/anyframer"
-	"github.com/yesoreyeram/grafana-plugins/restds"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/anyframer"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/restds"
 )
 
 func main() {

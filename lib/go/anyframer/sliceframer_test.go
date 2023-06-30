@@ -6,7 +6,7 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/experimental"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	af "github.com/yesoreyeram/grafana-plugins/anyframer"
+	af "github.com/yesoreyeram/grafana-plugins/lib/go/anyframer"
 )
 
 func TestSliceToFrame(t *testing.T) {

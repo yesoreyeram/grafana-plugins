@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	"github.com/yesoreyeram/grafana-plugins/anyframer"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/anyframer"
 )
 
 func TestGuessType(t *testing.T) {

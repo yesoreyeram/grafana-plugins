@@ -9,7 +9,7 @@ import (
 
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 	"github.com/swaggest/openapi-go/openapi3"
-	"github.com/yesoreyeram/grafana-plugins/restds"
+	"github.com/yesoreyeram/grafana-plugins/lib/go/restds"
 )
 
 type PetStoreRestDriver struct{}

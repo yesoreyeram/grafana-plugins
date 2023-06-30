@@ -1,0 +1,53 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] {
+//      "executedQueryString": "[12,14.56,0,30]"
+//  }
+//  Name: TestToDataFrame/number-array
+//  Dimensions: 1 Fields by 4 Rows
+//  +------------------------------------+
+//  | Name: TestToDataFrame/number-array |
+//  | Labels:                            |
+//  | Type: []*float64                   |
+//  +------------------------------------+
+//  | 12                                 |
+//  | 14.56                              |
+//  | 0                                  |
+//  | 30                                 |
+//  +------------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrame/number-array",
+        "meta": {
+          "executedQueryString": "[12,14.56,0,30]"
+        },
+        "fields": [
+          {
+            "name": "TestToDataFrame/number-array",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            12,
+            14.56,
+            0,
+            30
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: TestToDataFrameSlices/deep-object-array-with-nulls.json
+//  Dimensions: 6 Fields by 2 Rows
+//  +------------------+------------------+-----------------+-----------------------------------------+-----------------+-----------------+
+//  | Name: age        | Name: bar        | Name: foo       | Name: full_name                         | Name: hobbies   | Name: name      |
+//  | Labels:          | Labels:          | Labels:         | Labels:                                 | Labels:         | Labels:         |
+//  | Type: []*float64 | Type: []*float64 | Type: []*string | Type: []*string                         | Type: []*string | Type: []*string |
+//  +------------------+------------------+-----------------+-----------------------------------------+-----------------+-----------------+
+//  | 12               | null             | null            | {"first":"foo_first","last":"foo_last"} | ["one","two"]   | foo             |
+//  | 21.12            | 23               | null            | {"first":"bar_first","last":"bar_last"} | ["three"]       | bar             |
+//  +------------------+------------------+-----------------+-----------------------------------------+-----------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrameSlices/deep-object-array-with-nulls.json",
+        "fields": [
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "bar",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "foo",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "full_name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "hobbies",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            12,
+            21.12
+          ],
+          [
+            null,
+            23
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            "{\"first\":\"foo_first\",\"last\":\"foo_last\"}",
+            "{\"first\":\"bar_first\",\"last\":\"bar_last\"}"
+          ],
+          [
+            "[\"one\",\"two\"]",
+            "[\"three\"]"
+          ],
+          [
+            "foo",
+            "bar"
+          ]
+        ]
+      }
+    }
+  ]
+}

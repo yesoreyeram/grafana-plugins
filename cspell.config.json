@@ -14,6 +14,8 @@
     "datasource",
     "datasources",
     "endregion",
+    "gframer",
+    "gjson",
     "golangci",
     "GOPATH",
     "goxml",
@@ -23,7 +25,9 @@
     "httpclient",
     "instancemgmt",
     "jsonata",
+    "jsonframer",
     "magefile",
+    "noborus",
     "openapi",
     "pdts",
     "petstore",
@@ -34,6 +38,8 @@
     "sugumaran",
     "swaggest",
     "testdata",
+    "tidwall",
+    "trdsql",
     "vercel",
     "yesoreyeram"
   ]

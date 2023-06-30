@@ -1,0 +1,91 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] {
+//      "executedQueryString": "{ \"name\":\"foo\", \"age\": 12, \"hobbies\":[\"cricket\",\"music\"], \"isPrimeUser\": true, \"fullname\": { \"first\": \"foo\", \"last\":\"bar\" } }"
+//  }
+//  Name: TestToDataFrame/object
+//  Dimensions: 5 Fields by 1 Rows
+//  +------------------+------------------------------+---------------------+-------------------+-----------------+
+//  | Name: age        | Name: fullname               | Name: hobbies       | Name: isPrimeUser | Name: name      |
+//  | Labels:          | Labels:                      | Labels:             | Labels:           | Labels:         |
+//  | Type: []*float64 | Type: []*string              | Type: []*string     | Type: []*bool     | Type: []*string |
+//  +------------------+------------------------------+---------------------+-------------------+-----------------+
+//  | 12               | {"first":"foo","last":"bar"} | ["cricket","music"] | true              | foo             |
+//  +------------------+------------------------------+---------------------+-------------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "TestToDataFrame/object",
+        "meta": {
+          "executedQueryString": "{ \"name\":\"foo\", \"age\": 12, \"hobbies\":[\"cricket\",\"music\"], \"isPrimeUser\": true, \"fullname\": { \"first\": \"foo\", \"last\":\"bar\" } }"
+        },
+        "fields": [
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "fullname",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "hobbies",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "isPrimeUser",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "name",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            12
+          ],
+          [
+            "{\"first\":\"foo\",\"last\":\"bar\"}"
+          ],
+          [
+            "[\"cricket\",\"music\"]"
+          ],
+          [
+            true
+          ],
+          [
+            "foo"
+          ]
+        ]
+      }
+    }
+  ]
+}

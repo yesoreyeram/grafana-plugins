@@ -1,4 +1,4 @@
-module github.com/yesoreyeram/grafana-plugins/restds
+module github.com/yesoreyeram/grafana-plugins/lib/go/restds
 
 go 1.20
 
