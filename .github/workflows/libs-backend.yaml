@@ -47,9 +47,10 @@ jobs:
           golangci-lint --version
           echo "-------- turbo version -----"
           turbo --version
-      - name: Lint backend
-        run: |
-          yarn lint:backend
+      # # error with parallel golangci-lint is running
+      # - name: Lint backend
+      #   run: |
+      #     yarn lint:backend
       - name: Test backend
         run: |
           yarn test:backend
