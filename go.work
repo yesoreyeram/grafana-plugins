@@ -2,10 +2,11 @@ go 1.20
 
 use (
 	./
-	./lib/go/anyframer
-	./lib/go/csvframer
 	./lib/go/gframer
+	./lib/go/anyframer
 	./lib/go/jsonframer
+	./lib/go/csvframer
+	./lib/go/xmlframer
 	./lib/go/macros
 	./lib/go/restds
 	./lib/go/utils

@@ -1,0 +1,9 @@
+{
+  "name": "@yesoreyeram/grafana-go-xmlframer",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "test:backend": "go test -v  ./...",
+    "lint:backend": "golangci-lint run ./..."
+  }
+}
