@@ -1,4 +1,4 @@
-# CHANGELOG
+# @yesoreyeram/grafana-go-utils
 
 ## 0.0.2
 

@@ -33,6 +33,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@grafana/sign-plugin": "^0.0.2",
     "@grafana/toolkit": "8.4.7",
     "@grafana/tsconfig": "^1.2.0-rc1",
@@ -40,7 +41,7 @@
     "@testing-library/react": "12.1.2",
     "cspell": "^6.14.3",
     "cypress": "^10.10.0",
-    "typescript": "^4.8.4",
-    "turbo": "^1.6.3"
+    "turbo": "^1.6.3",
+    "typescript": "^4.8.4"
   }
 }

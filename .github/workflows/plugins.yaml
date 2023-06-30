@@ -60,7 +60,6 @@ jobs:
           echo "$JSON"
           echo "plugins=$( echo "$JSON" )" >> $GITHUB_OUTPUT
   test-and-build:
-    needs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout

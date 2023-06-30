@@ -1,6 +1,6 @@
-# CHANGELOG
+# @yesoreyeram/grafana-plugins-ui
 
-## 0.0.2
+## 0.0.1
 
 ### Patch Changes
 

@@ -1,4 +1,4 @@
-# CHANGELOG
+# @yesoreyeram/grafana-go-restds
 
 ## 0.0.2
 
