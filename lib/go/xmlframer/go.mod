@@ -5,7 +5,7 @@ go 1.20
 require (
 	github.com/basgys/goxml2json v1.1.0
 	github.com/grafana/grafana-plugin-sdk-go v0.167.0
-	github.com/yesoreyeram/grafana-plugins/lib/go/jsonframer v0.0.1
+	github.com/yesoreyeram/grafana-plugins/lib/go/jsonframer v0.0.2
 )
 
 require (
