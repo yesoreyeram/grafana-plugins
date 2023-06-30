@@ -1,6 +1,6 @@
 {
   "name": "@yesoreyeram/grafana-plugins-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "files": [
     ".prettierrc.ts",

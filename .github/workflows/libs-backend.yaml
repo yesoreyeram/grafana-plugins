@@ -30,7 +30,7 @@ jobs:
           curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.53.3
       - name: Install turbo
         run: |
-          yarn global add turbo@1.6.3
+          yarn global add turbo@1.10.6
       - name: Validate environment
         run: |
           echo "-------- node version -----"
@@ -47,9 +47,9 @@ jobs:
           golangci-lint --version
           echo "-------- turbo version -----"
           turbo --version
-      # - name: Lint backend
-      #   run: |
-      #     yarn lint:backend
+      - name: Lint backend
+        run: |
+          yarn lint:backend
       - name: Test backend
         run: |
           yarn test:backend
