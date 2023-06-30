@@ -15,6 +15,11 @@
     "test": {
       "outputs": []
     },
+    "tidy": {
+      "cache": false,
+      "inputs": ["go.mod"],
+      "outputs": ["go.mod", "go.sum"]
+    },
     "build": {
       "inputs": ["./lib", "./plugins"],
       "outputs": ["dist/**", "!dist/gpx*"]

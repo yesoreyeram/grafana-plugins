@@ -5,6 +5,7 @@ go 1.20
 require (
 	github.com/grafana/grafana-plugin-sdk-go v0.167.0
 	github.com/stretchr/testify v1.8.2
+	github.com/yesoreyeram/grafana-plugins/lib/go/utils v0.0.1
 )
 
 require (
