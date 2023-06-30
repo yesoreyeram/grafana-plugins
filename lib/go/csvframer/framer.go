@@ -11,7 +11,7 @@ import (
 	"github.com/yesoreyeram/grafana-plugins/lib/go/gframer"
 )
 
-type CSVFramerOptions struct {
+type FramerOptions struct {
 	FrameName          string
 	Columns            []gframer.ColumnSelector
 	Delimiter          string
@@ -21,7 +21,7 @@ type CSVFramerOptions struct {
 	NoHeaders          bool
 }
 
-func CsvStringToFrame(csvString string, options CSVFramerOptions) (frame *data.Frame, err error) {
+func ToFrame(csvString string, options FramerOptions) (frame *data.Frame, err error) {
 	if strings.TrimSpace(csvString) == "" {
 		return frame, errors.New("empty/invalid csv")
 	}
