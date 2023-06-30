@@ -3,6 +3,7 @@
         "anyframer",
         "Datasource",
         "endregion",
+        "golangci",
         "httpadapter",
         "httpclient",
         "instancemgmt",

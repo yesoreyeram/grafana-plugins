@@ -1,10 +1,13 @@
 go 1.20
 
 use (
-	./lib/go/macros
+	./
 	./lib/go/anyframer
-	./lib/go/restds
+	./lib/go/csvframer
 	./lib/go/gframer
+	./lib/go/jsonframer
+	./lib/go/macros
+	./lib/go/restds
 	./lib/go/utils
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource

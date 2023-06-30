@@ -1,5 +1,6 @@
 {
-  "name": "gframer",
+  "name": "@yesoreyeram/grafana-go-gframer",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "test:backend": "go test -v  ./...",

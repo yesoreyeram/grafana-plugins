@@ -1,6 +1,10 @@
 //  🌟 This was machine generated.  Do not edit. 🌟
 //  
 //  Frame[0] {
+//      "typeVersion": [
+//          0,
+//          0
+//      ],
 //      "executedQueryString": "[\"foo\",\"bar\"]"
 //  }
 //  Name: TestToDataFrame/string-array
@@ -23,6 +27,10 @@
       "schema": {
         "name": "TestToDataFrame/string-array",
         "meta": {
+          "typeVersion": [
+            0,
+            0
+          ],
           "executedQueryString": "[\"foo\",\"bar\"]"
         },
         "fields": [

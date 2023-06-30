@@ -8,6 +8,7 @@ coverage
 cypress/report.json
 cypress/screenshots/
 cypress/videos/
+cypress/downloads/
 
 # build
 .turbo

@@ -1,0 +1,71 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: 
+//  Dimensions: 3 Fields by 3 Rows
+//  +-----------------+-----------------+-----------------+
+//  | Name: a         | Name: b         | Name: c         |
+//  | Labels:         | Labels:         | Labels:         |
+//  | Type: []*string | Type: []*string | Type: []*string |
+//  +-----------------+-----------------+-----------------+
+//  | 1               | 2               | 3               |
+//  | 11              | 12              | 13              |
+//  | 21              | 22              | 23              |
+//  +-----------------+-----------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "b",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "c",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "1",
+            "11",
+            "21"
+          ],
+          [
+            "2",
+            "12",
+            "22"
+          ],
+          [
+            "3",
+            "13",
+            "23"
+          ]
+        ]
+      }
+    }
+  ]
+}

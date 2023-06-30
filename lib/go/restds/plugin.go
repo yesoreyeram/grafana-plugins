@@ -20,7 +20,7 @@ type datasourceInstance struct {
 }
 
 func getInstance(ctx context.Context, pluginCtx backend.PluginContext, im instancemgmt.InstanceManager) (*datasourceInstance, error) {
-	instance, err := im.Get(pluginCtx)
+	instance, err := im.Get(ctx, pluginCtx)
 	if err != nil {
 		return nil, err
 	}

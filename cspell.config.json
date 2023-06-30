@@ -3,6 +3,7 @@
     "**/node_modules/**",
     "**/dist/**",
     "lib/go/anyframer/testdata/**",
+    "lib/go/jsonframer/testdata/**",
     "data/provisioning/**",
     "**/*_test.go"
   ],
@@ -11,6 +12,7 @@
     "basgys",
     "clientcredentials",
     "codegen",
+    "csvframer",
     "datasource",
     "datasources",
     "endregion",

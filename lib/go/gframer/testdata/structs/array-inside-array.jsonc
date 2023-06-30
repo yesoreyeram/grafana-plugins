@@ -1,6 +1,10 @@
 //  🌟 This was machine generated.  Do not edit. 🌟
 //  
 //  Frame[0] {
+//      "typeVersion": [
+//          0,
+//          0
+//      ],
 //      "executedQueryString": "[[\"one\",\"two\"],[\"three\"]]"
 //  }
 //  Name: TestToDataFrame/array-inside-array
@@ -23,6 +27,10 @@
       "schema": {
         "name": "TestToDataFrame/array-inside-array",
         "meta": {
+          "typeVersion": [
+            0,
+            0
+          ],
           "executedQueryString": "[[\"one\",\"two\"],[\"three\"]]"
         },
         "fields": [

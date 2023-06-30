@@ -1,0 +1,55 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: 
+//  Dimensions: 2 Fields by 2 Rows
+//  +------------------+------------------+
+//  | Name: age        | Name: occupation |
+//  | Labels:          | Labels:          |
+//  | Type: []*float64 | Type: []*string  |
+//  +------------------+------------------+
+//  | 1                | null             |
+//  | 2                | student          |
+//  +------------------+------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "fields": [
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "occupation",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            1,
+            2
+          ],
+          [
+            null,
+            "student"
+          ]
+        ]
+      }
+    }
+  ]
+}

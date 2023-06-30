@@ -129,7 +129,7 @@ type DatasourceInstance struct {
 func (is *DatasourceInstance) Dispose() {}
 
 func getInstance(ctx context.Context, pluginCtx backend.PluginContext, im instancemgmt.InstanceManager) (*DatasourceInstance, error) {
-	instance, err := im.Get(pluginCtx)
+	instance, err := im.Get(ctx, pluginCtx)
 	if err != nil {
 		return nil, err
 	}

@@ -1,5 +1,6 @@
 {
-  "name": "utils",
+  "name": "@yesoreyeram/grafana-go-utils",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "test:backend": "go test -v  ./...",

@@ -1,6 +1,10 @@
 //  🌟 This was machine generated.  Do not edit. 🌟
 //  
 //  Frame[0] {
+//      "typeVersion": [
+//          0,
+//          0
+//      ],
 //      "executedQueryString": "[null,null]"
 //  }
 //  Name: TestToDataFrame/all-null-array
@@ -23,6 +27,10 @@
       "schema": {
         "name": "TestToDataFrame/all-null-array",
         "meta": {
+          "typeVersion": [
+            0,
+            0
+          ],
           "executedQueryString": "[null,null]"
         },
         "fields": [

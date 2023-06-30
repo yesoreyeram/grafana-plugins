@@ -1,5 +1,6 @@
 {
-  "name": "anyframer",
+  "name": "@yesoreyeram/grafana-go-anyframer",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "test:backend": "go test -v  ./...",

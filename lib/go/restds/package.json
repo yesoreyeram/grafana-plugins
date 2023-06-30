@@ -1,5 +1,6 @@
 {
-  "name": "restds",
+  "name": "@yesoreyeram/grafana-go-restds",
+  "private": true,
   "version": "0.0.1",
   "scripts": {
     "test:backend": "go test -v  ./...",

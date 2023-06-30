@@ -1,0 +1,40 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: 
+//  Dimensions: 1 Fields by 1 Rows
+//  +------------------+
+//  | Name:            |
+//  | Labels:          |
+//  | Type: []*float64 |
+//  +------------------+
+//  | 9.6              |
+//  +------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "fields": [
+          {
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            9.6
+          ]
+        ]
+      }
+    }
+  ]
+}
