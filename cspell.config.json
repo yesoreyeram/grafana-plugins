@@ -16,6 +16,7 @@
     "datasource",
     "datasources",
     "endregion",
+    "framesql",
     "gframer",
     "gjson",
     "golangci",
