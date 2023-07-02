@@ -1,5 +1,11 @@
 # @yesoreyeram/grafana-go-xmlframer
 
+## 0.0.5
+
+### Patch Changes
+
+- ⚙️ **Chore**: replace goxml2json module with clone
+
 ## 0.0.4
 
 ### Patch Changes

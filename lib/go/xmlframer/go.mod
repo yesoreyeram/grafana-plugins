@@ -55,3 +55,5 @@ require (
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2 // indirect
 	gonum.org/v1/gonum v0.13.0 // indirect
 )
+
+replace github.com/basgys/goxml2json => github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313
