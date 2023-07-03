@@ -11,6 +11,7 @@ use (
 	./lib/go/restds
 	./lib/go/utils
 	./lib/go/xmlframer
+	./lib/go/transformations
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
 	./plugins/yesoreyeram-petstore-datasource
