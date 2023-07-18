@@ -1,0 +1,26 @@
+{
+  "name": "@yesoreyeram/grafana-hyperping-datasource",
+  "version": "0.0.0",
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "test": "TZ=UTC grafana-toolkit plugin:test",
+    "tidy": "go mod tidy",
+    "build": "grafana-toolkit plugin:build",
+    "build:backend": "mage -v",
+    "test:backend": "go test -v  ./...",
+    "lint:backend": "mage -v lint",
+    "ci-build": "grafana-toolkit plugin:ci-build",
+    "sign": "npx @grafana/sign-plugin --rootUrls http://localhost:3000"
+  },
+  "dependencies": {
+    "@grafana/data": "10.0.1",
+    "@grafana/ui": "10.0.1",
+    "@grafana/schema": "10.0.1",
+    "@grafana/runtime": "10.0.1"
+  },
+  "devDependencies": {
+    "@yesoreyeram/grafana-plugins-config": "*"
+  }
+}

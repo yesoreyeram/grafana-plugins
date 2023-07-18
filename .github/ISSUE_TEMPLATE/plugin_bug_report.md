@@ -13,6 +13,7 @@ Choose the applicable plugin name
 - [ ] yesoreyeram-blank-datasource
 - [ ] yesoreyeram-hello-datasource
 - [ ] yesoreyeram-petstore-datasource
+- [ ] yesoreyeram-hyperping-datasource
 - [ ] yesoreyeram-vercel-datasource
 
 ## Describe the bug

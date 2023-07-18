@@ -15,5 +15,6 @@ use (
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
 	./plugins/yesoreyeram-petstore-datasource
+	./plugins/yesoreyeram-hyperping-datasource
 	./plugins/yesoreyeram-vercel-datasource
 )

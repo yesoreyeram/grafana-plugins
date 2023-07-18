@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src"
+  },
+  "include": ["./src", "./types"],
+  "extends": "@yesoreyeram/grafana-plugins-config/tsconfig.json"
+}

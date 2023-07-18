@@ -1,0 +1,30 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/main/docs/sources/developers/plugins/plugin.schema.json",
+  "id": "yesoreyeram-hyperping-datasource",
+  "name": "hyperping",
+  "type": "datasource",
+  "backend": true,
+  "metrics": true,
+  "annotations": true,
+  "alerting": true,
+  "executable": "gpx-yesoreyeram-hyperping-datasource",
+  "info": {
+    "version": "%VERSION%",
+    "updated": "%TODAY%",
+    "description": "hyperping datasource plugin and does nothing",
+    "author": {
+      "name": "Sriramajeyam Sugumaran"
+    },
+    "keywords": ["yesoreyeram", "hyperping"],
+    "logos": {
+      "small": "logo.svg",
+      "large": "logo.svg"
+    },
+    "links": [{ "name": "Github", "url": "https://github.com/yesoreyeram/grafana-plugins/tree/main/plugins/yesoreyeram-hyperping-datasource" }]
+  },
+  "dependencies": {
+    "grafanaDependency": ">=10.0.1",
+    "grafanaVersion": "10.0.1",
+    "plugins": []
+  }
+}
