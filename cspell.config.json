@@ -5,6 +5,8 @@
     "lib/go/anyframer/testdata/**",
     "lib/go/jsonframer/testdata/**",
     "data/provisioning/**",
+    "**/testdata/**/*.json",
+    "**/golden/**/*.jsonc",
     "**/*_test.go"
   ],
   "words": [
@@ -30,6 +32,7 @@
     "hclient",
     "httpadapter",
     "httpclient",
+    "hyperping",
     "instancemgmt",
     "jsonata",
     "jsonframer",

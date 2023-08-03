@@ -1,0 +1,24 @@
+{
+  "maintenanceWindows": [
+    {
+      "uuid": "mw_UGW0DTGrG3Junt",
+      "bulkUuid": null,
+      "name": "test 2",
+      "start_date": "2023-07-27T09:00:00.000Z",
+      "end_date": "2023-07-27T10:00:00.000Z",
+      "timezone": "UTC",
+      "monitors": [26553, 26551]
+    },
+    {
+      "uuid": "mw_wRqKFfe0goIYbv",
+      "bulkUuid": null,
+      "name": "Testing sriramajeyam.com",
+      "start_date": "2023-07-14T10:00:00.000Z",
+      "end_date": "2023-07-14T10:00:00.000Z",
+      "timezone": "UTC",
+      "monitors": [26551]
+    }
+  ],
+  "hasNextPage": false,
+  "total": 2
+}

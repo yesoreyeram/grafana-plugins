@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Sriramajeyam.com",
+    "url": "https://sriramajeyam.com",
+    "uuid": "mon_gn6a1rIEuzKQrT",
+    "protocol": "http",
+    "projectUuid": "proj_iqLoV0SWPhUQca",
+    "port": null,
+    "http_method": "GET",
+    "regions": ["sanfrancisco", "california", "virginia", "nyc", "london", "paris", "frankfurt", "amsterdam", "seoul", "mumbai", "bangalore", "singapore", "tokyo", "toronto"],
+    "check_frequency": 30,
+    "follow_redirects": true,
+    "expected_status_code": "2xx",
+    "request_body": "",
+    "request_headers": [],
+    "status": "up",
+    "ssl_expiration": 90
+  },
+  {
+    "name": "github.com",
+    "url": "https://github.com",
+    "uuid": "mon_t3gQXmhldFTAPR",
+    "protocol": "http",
+    "projectUuid": "proj_iqLoV0SWPhUQca",
+    "port": null,
+    "http_method": "GET",
+    "regions": ["sanfrancisco", "california", "virginia", "nyc", "london", "paris", "frankfurt", "amsterdam", "seoul", "mumbai", "bangalore", "singapore", "tokyo", "toronto"],
+    "check_frequency": 30,
+    "follow_redirects": true,
+    "expected_status_code": "2xx",
+    "request_body": "",
+    "request_headers": [],
+    "status": "up",
+    "ssl_expiration": 395
+  }
+]

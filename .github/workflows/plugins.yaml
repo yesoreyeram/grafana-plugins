@@ -20,6 +20,7 @@ jobs:
       yesoreyeram-blank-datasource: ${{ steps.changes.outputs.yesoreyeram-blank-datasource }}
       yesoreyeram-hello-datasource: ${{ steps.changes.outputs.yesoreyeram-hello-datasource }}
       yesoreyeram-petstore-datasource: ${{ steps.changes.outputs.yesoreyeram-petstore-datasource }}
+      yesoreyeram-hyperping-datasource: ${{ steps.changes.outputs.yesoreyeram-hyperping-datasource }}
       yesoreyeram-vercel-datasource: ${{ steps.changes.outputs.yesoreyeram-vercel-datasource }}
       plugins: ${{ steps.set-matrix.outputs.plugins }}
     steps:
@@ -39,6 +40,8 @@ jobs:
               - 'plugins/yesoreyeram-hello-datasource/**'
             yesoreyeram-petstore-datasource:
               - 'plugins/yesoreyeram-petstore-datasource/**'
+            yesoreyeram-hyperping-datasource:
+              - 'plugins/yesoreyeram-hyperping-datasource/**'
             yesoreyeram-vercel-datasource:
               - 'plugins/yesoreyeram-vercel-datasource/**'
       - name: Check changes
@@ -46,6 +49,7 @@ jobs:
           echo ${{ steps.changes.outputs.yesoreyeram-blank-datasource == 'true' }}
           echo ${{ steps.changes.outputs.yesoreyeram-hello-datasource == 'true' }}
           echo ${{ steps.changes.outputs.yesoreyeram-petstore-datasource == 'true' }}
+          echo ${{ steps.changes.outputs.yesoreyeram-hyperping-datasource == 'true' }}
           echo ${{ steps.changes.outputs.yesoreyeram-vercel-datasource == 'true' }}
       - name: Set matrix
         id: set-matrix
@@ -53,6 +57,7 @@ jobs:
           JSON="["
           if ${{ steps.changes.outputs.yesoreyeram-blank-datasource == 'true' }}; then JSON="$JSON\"yesoreyeram-blank-datasource\","; fi
           if ${{ steps.changes.outputs.yesoreyeram-hello-datasource == 'true' }}; then JSON="$JSON\"yesoreyeram-hello-datasource\","; fi
+          if ${{ steps.changes.outputs.yesoreyeram-hyperping-datasource == 'true' }}; then JSON="$JSON\"yesoreyeram-hello-datasource\","; fi
           if [[ $JSON == *, ]]; then
               JSON="${JSON%?}"
           fi
@@ -77,7 +82,7 @@ jobs:
       - name: Setup Go environment
         uses: actions/setup-go@v3
         with:
-          go-version: "1.19.4"
+          go-version: "1.20.6"
       - name: Install Mage
         run: |
           go install github.com/magefile/mage

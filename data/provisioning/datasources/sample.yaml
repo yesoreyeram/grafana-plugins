@@ -11,6 +11,11 @@ datasources:
   - name: Pet Store
     uid: petstore_ds_default
     type: yesoreyeram-petstore-datasource
+  - name: Hyper Ping
+    uid: hyperping_ds_default
+    type: yesoreyeram-hyperping-datasource
+    secureJsonData:
+      api_token: xxxxxxxxxxxx
   - name: Vercel
     uid: vercel_ds_default
     type: yesoreyeram-vercel-datasource
