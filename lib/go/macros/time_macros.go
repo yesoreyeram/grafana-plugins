@@ -35,6 +35,9 @@ func expandTimeMacro(t time.Time, args []string) (string, error) {
 	if format == "iso" {
 		return t.Format("2006-01-02T15:04:05.999Z"), nil
 	}
+	if format == "seconds" {
+		return fmt.Sprintf("%d", t.Unix()), nil
+	}
 	format = strings.ReplaceAll(format, "YYYY", "2006")
 	format = strings.ReplaceAll(format, "YY", "06")
 
