@@ -17,4 +17,5 @@ use (
 	./plugins/yesoreyeram-petstore-datasource
 	./plugins/yesoreyeram-hyperping-datasource
 	./plugins/yesoreyeram-vercel-datasource
+	./plugins/yesoreyeram-duckdb-datasource
 )

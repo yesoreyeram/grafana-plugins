@@ -18,6 +18,7 @@
     "dataframe",
     "datasource",
     "datasources",
+    "duckdb",
     "endregion",
     "endswith",
     "Evaluable",

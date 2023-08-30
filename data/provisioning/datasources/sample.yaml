@@ -21,3 +21,6 @@ datasources:
     type: yesoreyeram-vercel-datasource
     secureJsonData:
       apiToken: xxxxxxxxxxxx
+  - name: DuckDB
+    uid: duckdb_ds_default
+    type: yesoreyeram-duckdb-datasource
