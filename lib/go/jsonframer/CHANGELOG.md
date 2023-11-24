@@ -1,5 +1,11 @@
 # @yesoreyeram/grafana-go-jsonframer
 
+## 0.0.5
+
+### Patch Changes
+
+- replaced the backend package `blues/jsonata-go` to `xiatechs/jsonata-go`
+
 ## 0.0.4
 
 ### Patch Changes

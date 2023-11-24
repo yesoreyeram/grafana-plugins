@@ -4,9 +4,9 @@ go 1.20
 
 require (
 	github.com/basgys/goxml2json v1.1.0
-	github.com/blues/jsonata-go v1.5.4
 	github.com/grafana/grafana-plugin-sdk-go v0.167.0
 	github.com/stretchr/testify v1.8.4
+	github.com/xiatechs/jsonata-go v1.7.1
 )
 
 require (
@@ -50,6 +50,7 @@ require (
 	github.com/prometheus/procfs v0.8.0 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
 	github.com/rogpeppe/go-internal v1.11.0 // indirect
+	github.com/shopspring/decimal v1.3.1 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.40.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/httptrace/otelhttptrace v0.37.0 // indirect
 	go.opentelemetry.io/contrib/propagators/jaeger v1.15.0 // indirect
@@ -73,10 +74,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace (
-	// github.com/blues/jsonata-go => /Users/sriram/Documents/grafana/dev/plugins/json/goxml2json
-	// github.com/blues/jsonata-go => /Users/sriram/Documents/grafana/dev/plugins/json/jsonata-go
-	github.com/basgys/goxml2json => github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313
-	github.com/blues/jsonata-go => github.com/yesoreyeram/jsonata-go v0.0.0-20210804121258-31e6058dd1f5
-
-)
+replace github.com/basgys/goxml2json => github.com/yesoreyeram/goxml2json v0.0.0-20181031222924-996d9fc8d313

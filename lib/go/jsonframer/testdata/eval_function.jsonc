@@ -1,0 +1,67 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: 
+//  Dimensions: 3 Fields by 2 Rows
+//  +------------------+-----------------+------------------+
+//  | Name: a          | Name: b         | Name: c          |
+//  | Labels:          | Labels:         | Labels:          |
+//  | Type: []*float64 | Type: []*string | Type: []*float64 |
+//  +------------------+-----------------+------------------+
+//  | 1                | {"c":11}        | 11               |
+//  | 2                | {"c":22}        | 22               |
+//  +------------------+-----------------+------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "fields": [
+          {
+            "name": "a",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "b",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "c",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            1,
+            2
+          ],
+          [
+            "{\"c\":11}",
+            "{\"c\":22}"
+          ],
+          [
+            11,
+            22
+          ]
+        ]
+      }
+    }
+  ]
+}

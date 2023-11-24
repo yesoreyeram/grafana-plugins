@@ -15,10 +15,8 @@ func TestRootSelector(t *testing.T) {
 		input:  `{ "users" : [{"name":"foo","salary": 123, "self_employed":false},{"name":"bar","salary": 456.789, "self_employed":true}] }`,
 		framer: Framer{RootSelector: "users"},
 	}))
-	// FIXME: Empty array should not throw error
 	t.Run("array selector without value", testToFrame(testInputs{
-		input:   `{ "users" : [] }`,
-		framer:  Framer{RootSelector: "users"},
-		wantErr: errors.New("error applying root selector"),
+		input:  `{ "users" : [] }`,
+		framer: Framer{RootSelector: "users"},
 	}))
 }
