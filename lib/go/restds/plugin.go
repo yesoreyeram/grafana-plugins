@@ -33,7 +33,7 @@ func (ins *datasourceInstance) Dispose() {
 
 func NewPlugin(restDriver RestDriver, restDriverOptions RestDriverOptions) datasource.ServeOpts {
 	pluginHost := &pluginHost{
-		IM: datasource.NewInstanceManager(func(settings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
+		IM: datasource.NewInstanceManager(func(ctx context.Context, settings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
 			config, err := restDriver.LoadConfig(settings)
 			if err != nil {
 				return nil, fmt.Errorf("error loading config. %w", err)

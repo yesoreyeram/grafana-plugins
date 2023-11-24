@@ -1,5 +1,11 @@
 # @yesoreyeram/grafana-go-restds
 
+## 0.0.4
+
+### Patch Changes
+
+- replaced the backend package `blues/jsonata-go` to `xiatechs/jsonata-go`
+
 ## 0.0.3
 
 ### Patch Changes
