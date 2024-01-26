@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/blues/jsonata-go"
 	"github.com/grafana/grafana-plugin-sdk-go/data"
 	"github.com/tidwall/gjson"
+	"github.com/xiatechs/jsonata-go"
 	"github.com/yesoreyeram/grafana-plugins/lib/go/gframer"
 )
 

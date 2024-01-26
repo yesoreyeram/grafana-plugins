@@ -36,7 +36,7 @@ type DataSource struct {
 	backend.CallResourceHandler
 }
 
-func New(dis backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
+func New(ctx context.Context, dis backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
 	var err error
 	settings, err := LoadSettings(dis)
 	if err != nil {

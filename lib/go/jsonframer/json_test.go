@@ -226,6 +226,26 @@ func TestJsonStringToFrame(t *testing.T) {
 			}`,
 			rootSelector: "$sum(sss.bar1)",
 		},
+		{
+			name: "eval function",
+			responseString: `{
+				"inputs" : [
+					{
+						"a" : 1,
+						"b" : "{\"c\":11}"
+					},
+					{
+						"a" : 2,
+						"b": "{\"c\":22}"
+					}
+				]
+			}`,
+			rootSelector: `$map(inputs,function($v){{
+				"a": $v.a,
+				"b": $v.b,
+				"c": $eval("", $v.b).c
+			  }})`,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

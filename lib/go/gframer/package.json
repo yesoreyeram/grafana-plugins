@@ -1,7 +1,7 @@
 {
   "name": "@yesoreyeram/grafana-go-gframer",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.1.0",
   "scripts": {
     "tidy": "go mod tidy",
     "test:backend": "go test -v  ./...",

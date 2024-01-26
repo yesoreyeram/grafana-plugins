@@ -1,5 +1,11 @@
 # @yesoreyeram/grafana-go-xmlframer
 
+## 0.0.6
+
+### Patch Changes
+
+- replaced the backend package `blues/jsonata-go` to `xiatechs/jsonata-go`
+
 ## 0.0.5
 
 ### Patch Changes

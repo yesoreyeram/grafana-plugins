@@ -136,7 +136,7 @@ func getInstance(ctx context.Context, pluginCtx backend.PluginContext, im instan
 	return instance.(*DatasourceInstance), nil
 }
 
-func GetPluginInstance(backendSettings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
+func GetPluginInstance(ctx context.Context, backendSettings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
 	config, err := LoadConfig(backendSettings)
 	if err != nil {
 		return nil, fmt.Errorf("error getting plugin instance. %w", err)

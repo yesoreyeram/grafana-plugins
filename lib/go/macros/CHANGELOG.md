@@ -1,5 +1,11 @@
 # @yesoreyeram/grafana-go-macros
 
+## 0.1.0
+
+### Minor Changes
+
+- Added support for `${__from:date:seconds}` format in backend macros
+
 ## 0.0.3
 
 ### Patch Changes

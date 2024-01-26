@@ -42,7 +42,7 @@ func (ds *PluginHost) QueryData(ctx context.Context, req *backend.QueryDataReque
 func main() {
 	backend.SetupPluginEnvironment(PluginId)
 	pluginHost := &PluginHost{
-		IM: datasource.NewInstanceManager(func(settings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
+		IM: datasource.NewInstanceManager(func(ctx context.Context, settings backend.DataSourceInstanceSettings) (instancemgmt.Instance, error) {
 			return &DatasourceInstance{}, nil
 		}),
 	}

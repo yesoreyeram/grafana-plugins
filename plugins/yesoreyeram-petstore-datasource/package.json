@@ -1,6 +1,6 @@
 {
   "name": "@yesoreyeram/grafana-petstore-datasource",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "clean": "rm -rf dist/",
     "dev": "grafana-toolkit plugin:dev",

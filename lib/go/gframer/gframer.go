@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"sort"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
@@ -157,6 +158,27 @@ func sliceToFrame(name string, input []interface{}, options FramerOptions) (fram
 													field.Set(i, ToPointer(fmt.Sprintf("%v", currentValue)))
 												case bool:
 													field.Set(i, ToPointer(fmt.Sprintf("%v", currentValue.(bool))))
+												default:
+													noOperation(cvt)
+													field.Set(i, nil)
+												}
+											}
+											frame.Fields = append(frame.Fields, field)
+										case "boolean":
+											field := data.NewFieldFromFieldType(data.FieldTypeNullableBool, len(input))
+											field.Name = k
+											for i := 0; i < len(input); i++ {
+												currentValue := o[i]
+												switch cvt := currentValue.(type) {
+												case bool:
+													if val, ok := (currentValue.(bool)); ok {
+														field.Set(i, ToPointer(val))
+													}
+												case string:
+													val, ok := (currentValue.(string))
+													if ok && strings.ToLower(val) == "true" {
+														field.Set(i, ToPointer(true))
+													}
 												default:
 													noOperation(cvt)
 													field.Set(i, nil)

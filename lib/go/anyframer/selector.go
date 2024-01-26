@@ -3,7 +3,7 @@ package anyframer
 import (
 	"errors"
 
-	jsonata "github.com/blues/jsonata-go"
+	jsonata "github.com/xiatechs/jsonata-go"
 )
 
 func applySelector(input any, selector string) (output any, err error) {

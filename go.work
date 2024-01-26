@@ -1,4 +1,6 @@
-go 1.20
+go 1.21
+
+toolchain go1.21.3
 
 use (
 	./
@@ -9,12 +11,12 @@ use (
 	./lib/go/jsonframer
 	./lib/go/macros
 	./lib/go/restds
+	./lib/go/transformations
 	./lib/go/utils
 	./lib/go/xmlframer
-	./lib/go/transformations
 	./plugins/yesoreyeram-blank-datasource
 	./plugins/yesoreyeram-hello-datasource
-	./plugins/yesoreyeram-petstore-datasource
 	./plugins/yesoreyeram-hyperping-datasource
+	./plugins/yesoreyeram-petstore-datasource
 	./plugins/yesoreyeram-vercel-datasource
 )
