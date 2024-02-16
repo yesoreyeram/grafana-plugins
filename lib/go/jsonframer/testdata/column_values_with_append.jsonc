@@ -1,0 +1,140 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: M
+//  Dimensions: 9 Fields by 2 Rows
+//  +------------------+------------------+------------------------+-----------------+------------------+-----------------+---------------------+------------------+------------------+
+//  | Name: age        | Name: height     | Name: hobbies          | Name: isPremium | Name: occupation | Name: username  | Name: Primary Hobby | Name: age        | Name: occupation |
+//  | Labels:          | Labels:          | Labels:                | Labels:         | Labels:          | Labels:         | Labels:             | Labels:          | Labels:          |
+//  | Type: []*float64 | Type: []*float64 | Type: []*string        | Type: []*bool   | Type: []*string  | Type: []*string | Type: []*string     | Type: []*float64 | Type: []*string  |
+//  +------------------+------------------+------------------------+-----------------+------------------+-----------------+---------------------+------------------+------------------+
+//  | 1                | 123              | ["reading","swimming"] | true            | null             | foo             | reading             | 1                | null             |
+//  | 2                | 123.45           | ["writing","swimming"] | false           | student          | bar             | writing             | 2                | student          |
+//  +------------------+------------------+------------------------+-----------------+------------------+-----------------+---------------------+------------------+------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "name": "M",
+        "fields": [
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "height",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "hobbies",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "isPremium",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "occupation",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "username",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "Primary Hobby",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "age",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "occupation",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            1,
+            2
+          ],
+          [
+            123,
+            123.45
+          ],
+          [
+            "[\"reading\",\"swimming\"]",
+            "[\"writing\",\"swimming\"]"
+          ],
+          [
+            true,
+            false
+          ],
+          [
+            null,
+            "student"
+          ],
+          [
+            "foo",
+            "bar"
+          ],
+          [
+            "reading",
+            "writing"
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            null,
+            "student"
+          ]
+        ]
+      }
+    }
+  ]
+}

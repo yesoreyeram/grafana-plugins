@@ -21,6 +21,7 @@ func TestJsonStringToFrame(t *testing.T) {
 		refId          string
 		rootSelector   string
 		columns        []jsonframer.ColumnSelector
+		columnsType    jsonframer.ColumnsType
 		wantFrame      *data.Frame
 		wantErr        error
 	}{
@@ -124,6 +125,33 @@ func TestJsonStringToFrame(t *testing.T) {
 				{Selector: "age"},
 				{Selector: "occupation"},
 			},
+		},
+		{
+			name: "column values with append",
+			responseString: `[
+				{ "username": "foo", "age": 1, "height" : 123,  "isPremium": true, "hobbies": ["reading","swimming"] },
+				{ "username": "bar", "age": 2, "height" : 123.45,  "isPremium": false, "hobbies": ["writing","swimming"], "occupation": "student" }
+			]`,
+			refId:        "M",
+			rootSelector: "",
+			columns: []jsonframer.ColumnSelector{
+				{Selector: "age"},
+				{Selector: "hobbies.0", Alias: "Primary Hobby"},
+				{Selector: "occupation"},
+			},
+			columnsType: jsonframer.ColumnsTypeAppend,
+		},
+		{
+			name: "column values with overwrite",
+			responseString: `[
+				{ "username": "foo", "age": 1, "height" : 123,  "isPremium": true, "hobbies": ["reading","swimming"] },
+				{ "username": "bar", "age": 2, "height" : 123.45,  "isPremium": false, "hobbies": ["writing","swimming"], "occupation": "student" }
+			]`,
+			rootSelector: "",
+			columns: []jsonframer.ColumnSelector{
+				{Selector: "age", Type: "string", Alias: "Age"},
+			},
+			columnsType: jsonframer.ColumnsTypeOverride,
 		},
 		{
 			name: "string",
@@ -253,6 +281,7 @@ func TestJsonStringToFrame(t *testing.T) {
 				FrameName:    tt.refId,
 				RootSelector: tt.rootSelector,
 				Columns:      tt.columns,
+				ColumnsType:  tt.columnsType,
 			})
 			if tt.wantErr != nil {
 				require.NotNil(t, err)

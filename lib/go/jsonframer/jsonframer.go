@@ -19,12 +19,21 @@ const (
 	FramerTypeSQLite3 FramerType = "sqlite3"
 )
 
+type ColumnsType string
+
+const (
+	ColumnsTypeReplace  ColumnsType = "replace"  // Default. Only returns the selected columns
+	ColumnsTypeAppend   ColumnsType = "append"   // Append new columns along with the auto-generated ones
+	ColumnsTypeOverride ColumnsType = "override" // Override the specific columns with types and alias
+)
+
 type FramerOptions struct {
 	FramerType   FramerType // `gjson` | `sqlite3`
 	SQLite3Query string
 	FrameName    string
 	RootSelector string
 	Columns      []ColumnSelector
+	ColumnsType  ColumnsType
 }
 
 type ColumnSelector struct {
@@ -53,6 +62,59 @@ func ToFrame(jsonString string, options FramerOptions) (frame *data.Frame, err e
 		outString, err := GetRootData(jsonString, options.RootSelector)
 		if err != nil {
 			return frame, err
+		}
+		switch options.ColumnsType {
+		case ColumnsTypeAppend:
+			defaultFrame, err := getFrameFromResponseString(outString, FramerOptions{
+				FrameName:    options.FrameName,
+				RootSelector: options.RootSelector,
+				Columns:      []ColumnSelector{},
+			})
+			if err != nil {
+				return defaultFrame, err
+			}
+			newOutString, err := getColumnValuesFromResponseString(outString, options.Columns)
+			if err != nil {
+				return frame, err
+			}
+			frameWithNewColumns, err := getFrameFromResponseString(newOutString, options)
+			if err != nil {
+				return frameWithNewColumns, err
+			}
+			defaultFrame.Fields = append(defaultFrame.Fields, frameWithNewColumns.Fields...)
+			return defaultFrame, nil
+		case ColumnsTypeOverride:
+			defaultFrame, err := getFrameFromResponseString(outString, FramerOptions{
+				FrameName:    options.FrameName,
+				RootSelector: options.RootSelector,
+				Columns:      []ColumnSelector{},
+			})
+			if err != nil {
+				return defaultFrame, err
+			}
+			columnsWithOutAlias := []ColumnSelector{}
+			for _, c := range options.Columns {
+				c.Alias = ""
+				columnsWithOutAlias = append(columnsWithOutAlias, c)
+			}
+			newOutString, err := getColumnValuesFromResponseString(outString, columnsWithOutAlias)
+			if err != nil {
+				return frame, err
+			}
+			frameWithNewColumns, err := getFrameFromResponseString(newOutString, options)
+			if err != nil {
+				return defaultFrame, err
+			}
+			frameWithNewColumnsMap := map[string]*data.Field{}
+			for _, f := range frameWithNewColumns.Fields {
+				frameWithNewColumnsMap[f.Name] = f
+			}
+			for fi, f := range defaultFrame.Fields {
+				if nf, ok := frameWithNewColumnsMap[f.Name]; ok {
+					defaultFrame.Fields[fi] = nf
+				}
+			}
+			return defaultFrame, err
 		}
 		outString, err = getColumnValuesFromResponseString(outString, options.Columns)
 		if err != nil {
