@@ -8,15 +8,29 @@ import (
 	"github.com/grafana/grafana-plugin-sdk-go/backend"
 )
 
-func From(inputString string, timeRange backend.TimeRange) (string, error) {
+func from(inputString string, timeRange backend.TimeRange) (string, error) {
 	res, err := applyMacro("$$from", inputString, func(query string, args []string) (string, error) {
 		return expandTimeMacro(timeRange.From, args)
 	})
 	return res, err
 }
 
-func To(inputString string, timeRange backend.TimeRange) (string, error) {
+func timeFrom(inputString string, timeRange backend.TimeRange) (string, error) {
+	res, err := applyMacro("$$timeFrom", inputString, func(query string, args []string) (string, error) {
+		return expandTimeMacro(timeRange.From, args)
+	})
+	return res, err
+}
+
+func to(inputString string, timeRange backend.TimeRange) (string, error) {
 	res, err := applyMacro("$$to", inputString, func(query string, args []string) (string, error) {
+		return expandTimeMacro(timeRange.To, args)
+	})
+	return res, err
+}
+
+func timeTo(inputString string, timeRange backend.TimeRange) (string, error) {
+	res, err := applyMacro("$$timeTo", inputString, func(query string, args []string) (string, error) {
 		return expandTimeMacro(timeRange.To, args)
 	})
 	return res, err
