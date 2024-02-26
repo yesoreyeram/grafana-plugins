@@ -3,14 +3,10 @@ package gframer
 import (
 	"encoding/json"
 	"errors"
-	"fmt"
 	"sort"
-	"strconv"
-	"strings"
 	"time"
 
 	"github.com/grafana/grafana-plugin-sdk-go/data"
-	"github.com/yesoreyeram/grafana-plugins/lib/go/utils"
 )
 
 type ColumnSelector struct {
@@ -147,123 +143,22 @@ func sliceToFrame(name string, input []interface{}, options FramerOptions) (fram
 									if c.Alias == k || (c.Alias == "" && c.Selector == k) {
 										switch c.Type {
 										case "string":
-											field := data.NewFieldFromFieldType(data.FieldTypeNullableString, len(input))
-											field.Name = k
-											for i := 0; i < len(input); i++ {
-												currentValue := o[i]
-												switch cvt := currentValue.(type) {
-												case string:
-													field.Set(i, ToPointer(currentValue.(string)))
-												case float64, float32, int, int16, int32, int64, uint, uint8, uint16, uint32, uint64:
-													field.Set(i, ToPointer(fmt.Sprintf("%v", currentValue)))
-												case bool:
-													field.Set(i, ToPointer(fmt.Sprintf("%v", currentValue.(bool))))
-												default:
-													noOperation(cvt)
-													field.Set(i, nil)
-												}
-											}
+											field := anyToNullableString(input, k, nil, o)
 											frame.Fields = append(frame.Fields, field)
 										case "boolean":
-											field := data.NewFieldFromFieldType(data.FieldTypeNullableBool, len(input))
-											field.Name = k
-											for i := 0; i < len(input); i++ {
-												currentValue := o[i]
-												switch cvt := currentValue.(type) {
-												case bool:
-													if val, ok := (currentValue.(bool)); ok {
-														field.Set(i, ToPointer(val))
-													}
-												case string:
-													val, ok := (currentValue.(string))
-													if ok && strings.ToLower(val) == "true" {
-														field.Set(i, ToPointer(true))
-													}
-												default:
-													noOperation(cvt)
-													field.Set(i, nil)
-												}
-											}
+											field := anyToNullableBool(input, k, nil, o)
 											frame.Fields = append(frame.Fields, field)
 										case "number":
-											field := data.NewFieldFromFieldType(data.FieldTypeNullableFloat64, len(input))
-											field.Name = k
-											for i := 0; i < len(input); i++ {
-												currentValue := o[i]
-												switch cvt := currentValue.(type) {
-												case string:
-													if item, err := strconv.ParseFloat(currentValue.(string), 64); err == nil {
-														field.Set(i, ToPointer(item))
-													}
-												case float64:
-													field.Set(i, ToPointer(currentValue.(float64)))
-												default:
-													noOperation(cvt)
-													field.Set(i, nil)
-												}
-											}
+											field := anyToNullableNumber(input, k, nil, o)
 											frame.Fields = append(frame.Fields, field)
 										case "timestamp":
-											field := data.NewFieldFromFieldType(data.FieldTypeNullableTime, len(input))
-											field.Name = k
-											for i := 0; i < len(input); i++ {
-												currentValue := o[i]
-												switch a := currentValue.(type) {
-												case float64:
-													if v := fmt.Sprintf("%.0f", currentValue); v != "" {
-														format := "2006"
-														if c.TimeFormat != "" {
-															format = c.TimeFormat
-														}
-														if t, err := time.Parse(format, v); err == nil {
-															field.Set(i, ToPointer(t))
-														}
-													}
-												case string:
-													if currentValue.(string) != "" {
-														field.Set(i, utils.GetTimeFromString(currentValue.(string), c.TimeFormat))
-													}
-												default:
-													noOperation(a)
-													field.Set(i, nil)
-												}
-											}
+											field := anyToNullableTimestamp(input, k, nil, o, c.TimeFormat)
 											frame.Fields = append(frame.Fields, field)
 										case "timestamp_epoch":
-											field := data.NewFieldFromFieldType(data.FieldTypeNullableTime, len(input))
-											field.Name = k
-											for i := 0; i < len(input); i++ {
-												currentValue := o[i]
-												switch cvt := currentValue.(type) {
-												case string:
-													if item, err := strconv.ParseInt(currentValue.(string), 10, 64); err == nil && currentValue.(string) != "" {
-														field.Set(i, ToPointer(time.UnixMilli(item)))
-													}
-												case float64:
-													field.Set(i, ToPointer(time.UnixMilli(int64(currentValue.(float64)))))
-												default:
-													noOperation(cvt)
-													field.Set(i, nil)
-												}
-											}
+											field := anyToNullableTimestampEpoch(input, k, nil, o)
 											frame.Fields = append(frame.Fields, field)
 										case "timestamp_epoch_s":
-											field := data.NewFieldFromFieldType(data.FieldTypeNullableTime, len(input))
-											field.Name = k
-											for i := 0; i < len(input); i++ {
-												currentValue := o[i]
-												switch cvt := currentValue.(type) {
-												case string:
-													if item, err := strconv.ParseInt(currentValue.(string), 10, 64); err == nil && currentValue.(string) != "" {
-														field.Set(i, ToPointer(time.Unix(item, 0)))
-													}
-												case float64:
-													field.Set(i, ToPointer(time.Unix(int64(currentValue.(float64)), 0)))
-												default:
-													noOperation(cvt)
-													field.Set(i, nil)
-												}
-											}
+											field := anyToNullableTimestampEpochSecond(input, k, nil, o)
 											frame.Fields = append(frame.Fields, field)
 										default:
 											field := data.NewFieldFromFieldType(fieldType, len(input))
