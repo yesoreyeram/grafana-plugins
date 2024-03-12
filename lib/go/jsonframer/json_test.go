@@ -21,6 +21,7 @@ func TestJsonStringToFrame(t *testing.T) {
 		refId          string
 		rootSelector   string
 		columns        []jsonframer.ColumnSelector
+		overrides      []jsonframer.ColumnSelector
 		wantFrame      *data.Frame
 		wantErr        error
 	}{
@@ -246,13 +247,36 @@ func TestJsonStringToFrame(t *testing.T) {
 				"c": $eval("", $v.b).c
 			  }})`,
 		},
+		{
+			name: "timestamp overrides",
+			responseString: `[
+				{ "foo" : "2011-01-01T00:00:00.000Z", "bar1": 1325376000000, "baz" : true },
+				{ "foo" : "2012-01-01T00:00:00.000Z", "bar1": 1356998400000, "baz" : false}
+			]`,
+			overrides: []jsonframer.ColumnSelector{
+				{Selector: "foo", Type: "timestamp"},
+			},
+		},
+		{
+			name: "field overrides",
+			responseString: `[
+				{ "foo" : "2011-01-01T00:00:00.000Z", "bar1": 1325376000000, "baz" : true },
+				{ "foo" : "2012-01-01T00:00:00.000Z", "bar1": 1356998400000, "baz" : false , "num": 12, "bool": false, "str": "hello", "nullf": null }
+			]`,
+			overrides: []jsonframer.ColumnSelector{
+				{Selector: "foo", Type: "timestamp"},
+				{Selector: "bar1", Type: "string"},
+				{Selector: "baz", Type: "string"},
+			},
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			gotFrame, err := jsonframer.ToFrame(tt.responseString, jsonframer.FramerOptions{
-				FrameName:    tt.refId,
-				RootSelector: tt.rootSelector,
-				Columns:      tt.columns,
+				FrameName:       tt.refId,
+				RootSelector:    tt.rootSelector,
+				Columns:         tt.columns,
+				OverrideColumns: tt.overrides,
 			})
 			if tt.wantErr != nil {
 				require.NotNil(t, err)

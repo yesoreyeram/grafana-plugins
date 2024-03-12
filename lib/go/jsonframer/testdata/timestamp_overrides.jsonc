@@ -1,0 +1,67 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: 
+//  Dimensions: 3 Fields by 2 Rows
+//  +------------------+---------------+-------------------------------+
+//  | Name: bar1       | Name: baz     | Name: foo                     |
+//  | Labels:          | Labels:       | Labels:                       |
+//  | Type: []*float64 | Type: []*bool | Type: []*time.Time            |
+//  +------------------+---------------+-------------------------------+
+//  | 1.325376e+12     | true          | 2011-01-01 00:00:00 +0000 UTC |
+//  | 1.3569984e+12    | false         | 2012-01-01 00:00:00 +0000 UTC |
+//  +------------------+---------------+-------------------------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "fields": [
+          {
+            "name": "bar1",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "baz",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "foo",
+            "type": "time",
+            "typeInfo": {
+              "frame": "time.Time",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            1325376000000,
+            1356998400000
+          ],
+          [
+            true,
+            false
+          ],
+          [
+            1293840000000,
+            1325376000000
+          ]
+        ]
+      }
+    }
+  ]
+}

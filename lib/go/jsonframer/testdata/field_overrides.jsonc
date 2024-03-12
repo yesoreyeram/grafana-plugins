@@ -1,0 +1,115 @@
+//  🌟 This was machine generated.  Do not edit. 🌟
+//  
+//  Frame[0] 
+//  Name: 
+//  Dimensions: 7 Fields by 2 Rows
+//  +-----------------+-----------------+---------------+-------------------------------+-----------------+------------------+-----------------+
+//  | Name: bar1      | Name: baz       | Name: bool    | Name: foo                     | Name: nullf     | Name: num        | Name: str       |
+//  | Labels:         | Labels:         | Labels:       | Labels:                       | Labels:         | Labels:          | Labels:         |
+//  | Type: []*string | Type: []*string | Type: []*bool | Type: []*time.Time            | Type: []*string | Type: []*float64 | Type: []*string |
+//  +-----------------+-----------------+---------------+-------------------------------+-----------------+------------------+-----------------+
+//  | 1.325376e+12    | true            | null          | 2011-01-01 00:00:00 +0000 UTC | null            | null             | null            |
+//  | 1.3569984e+12   | false           | false         | 2012-01-01 00:00:00 +0000 UTC | null            | 12               | hello           |
+//  +-----------------+-----------------+---------------+-------------------------------+-----------------+------------------+-----------------+
+//  
+//  
+//  🌟 This was machine generated.  Do not edit. 🌟
+{
+  "status": 200,
+  "frames": [
+    {
+      "schema": {
+        "fields": [
+          {
+            "name": "bar1",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "baz",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "bool",
+            "type": "boolean",
+            "typeInfo": {
+              "frame": "bool",
+              "nullable": true
+            }
+          },
+          {
+            "name": "foo",
+            "type": "time",
+            "typeInfo": {
+              "frame": "time.Time",
+              "nullable": true
+            }
+          },
+          {
+            "name": "nullf",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          },
+          {
+            "name": "num",
+            "type": "number",
+            "typeInfo": {
+              "frame": "float64",
+              "nullable": true
+            }
+          },
+          {
+            "name": "str",
+            "type": "string",
+            "typeInfo": {
+              "frame": "string",
+              "nullable": true
+            }
+          }
+        ]
+      },
+      "data": {
+        "values": [
+          [
+            "1.325376e+12",
+            "1.3569984e+12"
+          ],
+          [
+            "true",
+            "false"
+          ],
+          [
+            null,
+            false
+          ],
+          [
+            1293840000000,
+            1325376000000
+          ],
+          [
+            null,
+            null
+          ],
+          [
+            null,
+            12
+          ],
+          [
+            null,
+            "hello"
+          ]
+        ]
+      }
+    }
+  ]
+}
