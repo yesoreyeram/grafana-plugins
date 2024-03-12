@@ -20,6 +20,7 @@ type FramerOptions struct {
 	FrameName           string
 	ExecutedQueryString string
 	Columns             []ColumnSelector
+	OverrideColumns     []ColumnSelector
 }
 
 func noOperation(x interface{}) {}
@@ -120,7 +121,20 @@ func sliceToFrame(name string, input []interface{}, options FramerOptions) (fram
 						}
 					}
 				}
-				for _, k := range sortedKeys(results) {
+				keys := sortedKeys(results)
+				if len(options.OverrideColumns) > 0 {
+					options.Columns = []ColumnSelector{}
+					for _, key := range keys {
+						overriddenColumn := ColumnSelector{Selector: key}
+						for _, oc := range options.OverrideColumns {
+							if oc.Selector == key {
+								overriddenColumn = oc
+							}
+						}
+						options.Columns = append(options.Columns, overriddenColumn)
+					}
+				}
+				for _, k := range keys {
 					if results[k] != nil {
 						o := []interface{}{}
 						for i := 0; i < len(input); i++ {

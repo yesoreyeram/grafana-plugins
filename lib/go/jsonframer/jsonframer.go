@@ -20,11 +20,12 @@ const (
 )
 
 type FramerOptions struct {
-	FramerType   FramerType // `gjson` | `sqlite3`
-	SQLite3Query string
-	FrameName    string
-	RootSelector string
-	Columns      []ColumnSelector
+	FramerType      FramerType // `gjson` | `sqlite3`
+	SQLite3Query    string
+	FrameName       string
+	RootSelector    string
+	Columns         []ColumnSelector
+	OverrideColumns []ColumnSelector
 }
 
 type ColumnSelector struct {
@@ -141,12 +142,22 @@ func getFrameFromResponseString(responseString string, options FramerOptions) (f
 			TimeFormat: c.TimeFormat,
 		})
 	}
+	overrides := []gframer.ColumnSelector{}
+	for _, c := range options.OverrideColumns {
+		overrides = append(overrides, gframer.ColumnSelector{
+			Alias:      c.Alias,
+			Selector:   c.Selector,
+			Type:       c.Type,
+			TimeFormat: c.TimeFormat,
+		})
+	}
 	return gframer.ToDataFrame(out, gframer.FramerOptions{
-		FrameName: options.FrameName,
-		Columns:   columns,
+		FrameName:       options.FrameName,
+		Columns:         columns,
+		OverrideColumns: overrides,
 	})
 }
 
-func convertFieldValueType(input interface{}, col ColumnSelector) interface{} {
+func convertFieldValueType(input interface{}, _ ColumnSelector) interface{} {
 	return input
 }
