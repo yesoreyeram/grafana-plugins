@@ -1,5 +1,11 @@
 # @yesoreyeram/grafana-go-gframer
 
+## 0.2.0
+
+### Minor Changes
+
+- Allow column overrides
+
 ## 0.1.0
 
 ### Minor Changes
